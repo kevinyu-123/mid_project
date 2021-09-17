@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="443.0" prefWidth="646.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
+	<children>
+		<Label layoutX="260.0" layoutY="18.0" text="님 환영합니다!" textFill="WHITE">
+			<font>
+				<Font size="26.0" />
+			</font>
+		</Label>
+		<Label fx:id="fxName" layoutX="200.0" layoutY="18.0" prefHeight="31.0" prefWidth="67.0" text="name" textFill="WHITE">
+			<font>
+				<Font size="25.0" />
+			</font>
+		</Label>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="20.0" layoutY="61.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image1.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="142.0" layoutY="61.0" onContextMenuRequested="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image2.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="273.0" layoutY="61.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image3.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="398.0" layoutY="61.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image4.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="518.0" layoutY="61.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image5.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="26.0" layoutY="244.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image6.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="148.0" layoutY="244.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image7.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="279.0" layoutY="244.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image8.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="404.0" layoutY="244.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image9.jpeg" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="181.0" fitWidth="112.0" layoutX="524.0" layoutY="244.0" onMouseClicked="#gotoDetail" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../../../../img_movie/movie_image10.jpeg" />
+			</image>
+		</ImageView>
+	</children>
+</AnchorPane>
