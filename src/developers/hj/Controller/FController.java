@@ -12,18 +12,20 @@ import javafx.scene.Parent;
 public class FController implements Initializable {
 	Parent root;
 	AdminService as;
-	
+
 	public void setRoot(Parent root) {
 		this.root = root;
 		as.setRoot(root);
 	}
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		as = new AdminServiceImpl();
 		dbCommon.setDBConnection();
 	}
+
 	public void adminLogin() {
 		as.login();
 	}
-	
+
 }

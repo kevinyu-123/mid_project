@@ -24,7 +24,6 @@ public class DBSerivceImpl implements DBService {
 				dto.setPwd(rs.getString("pwd"));
 				dto.setMemNo(rs.getString("memno"));
 
-
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
