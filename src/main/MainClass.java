@@ -11,7 +11,7 @@ public class MainClass extends Application{
 	@Override
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/Main.fxml"));
 		Parent root = loader.load();
 		Controller ctl = loader.getController();
 		ctl.setRoot(root);
