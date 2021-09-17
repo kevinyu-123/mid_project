@@ -1,7 +1,7 @@
 package developers.soo;
 
 import java.io.IOException;
-import db.DBService;
+import db.DBServiceImpl;
 import dto.MemberDTO;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class MemInsert {
-	DBService dbservice;
+	DBServiceImpl dbservice;
 	MemberDTO dbdto;
 	
 	Parent root;

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane layoutX="-1.0" prefHeight="415.0" prefWidth="985.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <AnchorPane layoutX="216.0" layoutY="-76.0" prefHeight="478.0" prefWidth="575.0">
+         <children>
+            <Line endX="508.20703125" endY="-0.5" layoutX="54.0" layoutY="401.0" startX="2.5" stroke="#b29292" />
+            <Line endX="497.70703125" endY="-11.0" layoutX="64.0" layoutY="411.0" startX="497.70703125" startY="-333.29290771484375" stroke="#b29292" />
+            <Line endX="396.0" endY="1.0" layoutX="165.0" layoutY="76.0" startX="-110.5" startY="-1.0" stroke="#b29292" />
+            <Line endX="-100.0" endY="287.0" layoutX="155.0" layoutY="114.0" startX="-101.0" startY="-38.5" stroke="#b29e9e" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="150.0">
+               <image>
+                  <Image url="@seatImage/abcde/a.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="190.0">
+               <image>
+                  <Image url="@seatImage/abcde/b.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="230.0">
+               <image>
+                  <Image url="@seatImage/abcde/c.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="270.0">
+               <image>
+                  <Image url="@seatImage/abcde/d.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="310.0">
+               <image>
+                  <Image url="@seatImage/abcde/e.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="380.0" layoutY="150.0" onMouseClicked="#a8">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-eight-594396.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="250.0" layoutY="150.0" onMouseClicked="#a5">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-five-594397.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="220.0" layoutY="150.0" onMouseClicked="#a4">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-four-594398.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="450.0" layoutY="150.0" onMouseClicked="#a9">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-nine-594399.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="90.0" layoutY="150.0" onMouseClicked="#a1">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-one-594400.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="150.0" onMouseClicked="#a7">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-seven-594401.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="320.0" layoutY="150.0" onMouseClicked="#a6">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-six-594402.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="480.0" layoutY="150.0" onMouseClicked="#a10">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-ten-594403.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="190.0" layoutY="150.0" onMouseClicked="#a3">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-three-594404.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="120.0" layoutY="150.0" onMouseClicked="#a2">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-two-594405.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="380.0" layoutY="190.0" onMouseClicked="#b8">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-eight-594396.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="250.0" layoutY="190.0" onMouseClicked="#b5">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-five-594397.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="220.0" layoutY="190.0" onMouseClicked="#b4">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-four-594398.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="450.0" layoutY="190.0" onMouseClicked="#b9">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-nine-594399.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="90.0" layoutY="190.0" onMouseClicked="#b1">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-one-594400.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="190.0" onMouseClicked="#b7">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-seven-594401.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="320.0" layoutY="190.0" onMouseClicked="#b6">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-six-594402.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="480.0" layoutY="190.0" onMouseClicked="#b10">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-ten-594403.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="190.0" layoutY="190.0" onMouseClicked="#b3">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-three-594404.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="120.0" layoutY="190.0" onMouseClicked="#b2">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-two-594405.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="380.0" layoutY="230.0" onMouseClicked="#c8">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-eight-594396.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="250.0" layoutY="230.0" onMouseClicked="#c5">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-five-594397.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="220.0" layoutY="230.0" onMouseClicked="#c4">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-four-594398.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="450.0" layoutY="230.0" onMouseClicked="#c9">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-nine-594399.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="90.0" layoutY="230.0" onMouseClicked="#c1">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-one-594400.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="230.0" onMouseClicked="#c7">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-seven-594401.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="320.0" layoutY="230.0" onMouseClicked="#c6">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-six-594402.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="480.0" layoutY="230.0" onMouseClicked="#c10">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-ten-594403.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="190.0" layoutY="230.0" onMouseClicked="#c3">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-three-594404.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="120.0" layoutY="230.0" onMouseClicked="#c2">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-two-594405.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="380.0" layoutY="270.0" onMouseClicked="#d8">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-eight-594396.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="250.0" layoutY="270.0" onMouseClicked="#d5">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-five-594397.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="220.0" layoutY="270.0" onMouseClicked="#d4">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-four-594398.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="450.0" layoutY="270.0" onMouseClicked="#d9">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-nine-594399.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="90.0" layoutY="270.0" onMouseClicked="#d1">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-one-594400.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0" onMouseClicked="#d7">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-seven-594401.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="320.0" layoutY="270.0" onMouseClicked="#d6">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-six-594402.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="480.0" layoutY="270.0" onMouseClicked="#d10">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-ten-594403.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="190.0" layoutY="270.0" onMouseClicked="#d3">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-three-594404.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="120.0" layoutY="270.0" onMouseClicked="#d2">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-two-594405.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="380.0" layoutY="310.0" onMouseClicked="#e8">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-eight-594396.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="250.0" layoutY="310.0" onMouseClicked="#e5">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-five-594397.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="220.0" layoutY="310.0" onMouseClicked="#e4">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-four-594398.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="450.0" layoutY="310.0" onMouseClicked="#e9">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-nine-594399.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="90.0" layoutY="310.0" onMouseClicked="#e1">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-one-594400.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="310.0" onMouseClicked="#e7">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-seven-594401.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="320.0" layoutY="310.0" onMouseClicked="#e6">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-six-594402.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="480.0" layoutY="310.0" onMouseClicked="#e10">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-ten-594403.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="190.0" layoutY="310.0" onMouseClicked="#e3">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-three-594404.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="120.0" layoutY="310.0" onMouseClicked="#e2">
+               <image>
+                  <Image url="@seatImage/whiteNum/free-icon-two-594405.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="518.0" layoutY="77.0">
+               <image>
+                  <Image url="@../../../../../../Users/shkg1/Downloads/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="55.0" layoutY="351.0">
+               <image>
+                  <Image url="@../../../../../../Users/shkg1/Downloads/exit.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="76.0" opacity="0.89" prefHeight="34.0" prefWidth="461.0" style="-fx-background-color: #ECEBFF;" text="S C R E E N" textFill="#3e64bc80">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="807.0" layoutY="140.0" onMouseClicked="#a1">
+         <image>
+            <Image url="@seatImage/whiteNum/free-icon-ten-594403.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="851.0" layoutY="98.0" text="선택">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="851.0" layoutY="140.0" text="예매완료">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" endY="-14.0" layoutX="115.0" layoutY="14.0" startX="100.0" startY="399.5" />
+      <Label layoutX="14.0" layoutY="14.0" text="좌 석">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="60.0" text="인원(최대 4매)">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="97.0" text="성 인" />
+      <Label layoutX="20.0" layoutY="131.0" text="청 소 년" />
+      <Button layoutX="70.0" layoutY="93.0" mnemonicParsing="false" text="0" />
+      <Button layoutX="142.0" layoutY="93.0" mnemonicParsing="false" text="3" />
+      <Button layoutX="118.0" layoutY="93.0" mnemonicParsing="false" text="2" />
+      <Button layoutX="94.0" layoutY="93.0" mnemonicParsing="false" text="1" />
+      <Button layoutX="70.0" layoutY="127.0" mnemonicParsing="false" text="0" />
+      <Button layoutX="142.0" layoutY="127.0" mnemonicParsing="false" text="3" />
+      <Button layoutX="118.0" layoutY="127.0" mnemonicParsing="false" text="2" />
+      <Button layoutX="94.0" layoutY="127.0" mnemonicParsing="false" text="1" />
+      <Button layoutX="19.0" layoutY="362.0" mnemonicParsing="false" text="영화선택" />
+      <Button layoutX="139.0" layoutY="362.0" mnemonicParsing="false" text="결제선택" />
+      <Label layoutX="27.0" layoutY="253.0" text="총 결제금액">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="307.0" text="22,000">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="313.0" text="원">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="807.0" layoutY="98.0">
+         <image>
+            <Image url="@seatImage/blueNum/free-icon-ten-594935.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
