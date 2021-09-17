@@ -1,5 +1,5 @@
 package db;
 
-public class DBService {
+public interface DBService {
 
 }
