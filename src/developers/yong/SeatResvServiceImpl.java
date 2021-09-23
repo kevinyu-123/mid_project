@@ -1,48 +1,60 @@
 package developers.yong;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import common.ComService;
 import dto.ResvDTO;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class SeatResvServiceImpl implements SeatResvService{
 	Parent root;
 	ResvDTO dto;
-	int adtAmount = 0,cdrAmount = 0,allAmount = 0, ticket = 0;
+	int adtPrice = 15000, cdrPrice = 10000,adtAmount = 0,cdrAmount = 0,allAmount = 0,ticket = 0;
 	String seatNum;
 	ArrayList<String> allSeatNum = new ArrayList<String>();
-	//영화선택창에서 dto 받아와야함
+	// 영화선택창에서 dto 받아와야함
 	public void setRoot(Parent root) {this.root=root;}
-	
+	// 숫자 3자리마다 콤마 넣기
+	DecimalFormat decFormat = new DecimalFormat("###,###");
+	// 관리자가 티켓 금액 변경
+	public void ticketPriceChange() {
+		Label adtPrice = (Label)root.lookup("#fxAdtPriceChange");
+		Label cdrPrice = (Label)root.lookup("#fxCdrPriceChange");
+		adtPrice.setText(  ""+" X");
+		cdrPrice.setText(  ""+" X");
+	}
 	// 성인 티켓 체크
 	public void adtPrice() {
 		Label adtPrice = (Label)root.lookup("#fxAdtPrice");
-		adtPrice.setText(ticket+" = "+adtAmount+",000 원");
+		String str = decFormat.format(adtAmount);
+		adtPrice.setText(ticket+" = "+str+"원");
 	}
 	public void adt0() {this.ticket = 0; this.adtAmount = 0;adtPrice();amount();}
-	public void adt1() {this.ticket = 1; this.adtAmount = 15;adtPrice();amount();}
-	public void adt2() {this.ticket = 2; this.adtAmount = 30;adtPrice();amount();}
-	public void adt3() {this.ticket = 3; this.adtAmount = 45;adtPrice();amount();}
+	public void adt1() {this.ticket = 1; this.adtAmount = adtPrice;adtPrice();amount();}
+	public void adt2() {this.ticket = 2; this.adtAmount = adtPrice*2;adtPrice();amount();}
+	public void adt3() {this.ticket = 3; this.adtAmount = adtPrice*3;adtPrice();amount();}
 	
 	// 청소년 티켓 체크
 	public void cdrPrice() {
 		Label cdrPrice = (Label)root.lookup("#fxCdrPrice");
-		cdrPrice.setText(ticket+" = "+cdrAmount+",000 원");
+		String str = decFormat.format(cdrAmount);
+		cdrPrice.setText(ticket+" = "+str+"원");
 	}
 	public void cdr0() {this.ticket = 0; this.cdrAmount = 0;cdrPrice();amount();}
-	public void cdr1() {this.ticket = 1; this.cdrAmount = 10;cdrPrice();amount();}
-	public void cdr2() {this.ticket = 2; this.cdrAmount = 20;cdrPrice();amount();}
-	public void cdr3() {this.ticket = 3; this.cdrAmount = 30;cdrPrice();amount();}
+	public void cdr1() {this.ticket = 1; this.cdrAmount = cdrPrice;cdrPrice();amount();}
+	public void cdr2() {this.ticket = 2; this.cdrAmount = cdrPrice*2;cdrPrice();amount();}
+	public void cdr3() {this.ticket = 3; this.cdrAmount = cdrPrice*3;cdrPrice();amount();}
 	// 총 결제금액 변경
 	public void amount() {
 		allAmount = adtAmount + cdrAmount;
 		Label amount = (Label)root.lookup("#fxAmount");
-		amount.setText(allAmount+",000");
+		String str = decFormat.format(allAmount);
+		amount.setText(str);
 	}
 	// 영화선택 메뉴로 돌아가기
 	public void mvChoice() {}
@@ -68,7 +80,13 @@ public class SeatResvServiceImpl implements SeatResvService{
 			imgv.setFitWidth(30.0);
 			btn.setGraphic(imgv);
 			seatNum = alp+num;
-			allSeatNum.add(seatNum);
+			if(allSeatNum.size()<4) {
+				allSeatNum.add(seatNum);
+				System.out.println(allSeatNum);
+			}else {
+				System.out.println("알람 출력");
+				ComService.Alart("알람 출력");
+			}
 		}else {
 			Image img = new Image("developers/yong/seatImage/whiteNum/free-icon-"+num+".png");
 			ImageView imgv = new ImageView(img);

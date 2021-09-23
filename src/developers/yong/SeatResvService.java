@@ -5,6 +5,8 @@ import javafx.scene.Parent;
 
 public interface SeatResvService {
 	public void setRoot(Parent root);
+	//관리자 티켓 가격 변경
+	public void ticketPriceChange();
 	// 성인 티켓 체크
 	public void adt0(); public void adt1(); public void adt2(); public void adt3();
 	public void adtPrice();
