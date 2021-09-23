@@ -18,7 +18,7 @@ public class DetailController implements Initializable {
 
 	public void setRoot(Parent root) {
 		this.root = root;
-		ms.setMedia(root,"/media/movie_video1.mp4");
+		ms.setMedia(root,"/media/video1.mp4");
 	}
 		
 

@@ -32,20 +32,20 @@
 				<ImageView fitHeight="181.0" fitWidth="112.0"
 					pickOnBounds="true" preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image1.jpeg" />
+						<Image url="@../image/image1.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
 		</Button>
 		<Button fx:id="btn02" layoutX="159.0" layoutY="55.0"
-			mnemonicParsing="false" onAction="#gotoDetail" prefHeight="171.0"
-			prefWidth="121.0" style="-fx-background-color: black;">
+			mnemonicParsing="false" prefHeight="171.0" prefWidth="121.0"
+			style="-fx-background-color: black;">
 			<graphic>
 				<ImageView fitHeight="181.0" fitWidth="112.0"
 					onMouseClicked="#gotoDetail" pickOnBounds="true"
 					preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image2.jpeg" />
+						<Image url="@../image/image2.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -58,7 +58,7 @@
 					onMouseClicked="#gotoDetail" pickOnBounds="true"
 					preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image3.jpeg" />
+						<Image url="@../image/image3.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -71,7 +71,7 @@
 					onDragDetected="#gotoDetail" onMouseClicked="#gotoDetail"
 					pickOnBounds="true" preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image8.jpeg" />
+						<Image url="@../image/image8.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -84,7 +84,7 @@
 					onMouseClicked="#gotoDetail" pickOnBounds="true"
 					preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image4.jpeg" />
+						<Image url="@../image/image4.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -97,7 +97,7 @@
 					onMouseClicked="#gotoDetail" pickOnBounds="true"
 					preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image6.jpeg" />
+						<Image url="@../image/image6.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -109,7 +109,7 @@
 					onDragDetected="#gotoDetail" onMouseClicked="#gotoDetail"
 					pickOnBounds="true" preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image7.jpeg" />
+						<Image url="@../image/image7.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -122,7 +122,7 @@
 					onMouseClicked="#gotoDetail" pickOnBounds="true"
 					preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image9.jpeg" />
+						<Image url="@../image/image9.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -135,7 +135,7 @@
 					onMouseClicked="#gotoDetail" pickOnBounds="true"
 					preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image10.jpeg" />
+						<Image url="@../image/image10.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -148,7 +148,7 @@
 					onMouseClicked="#gotoDetail" pickOnBounds="true"
 					preserveRatio="true">
 					<image>
-						<Image url="@../../../../../img_movie/movie_image5.jpeg" />
+						<Image url="@../image/image5.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
