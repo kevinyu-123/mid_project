@@ -12,11 +12,11 @@
 
 <AnchorPane layoutX="-1.0" prefHeight="415.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.yong.SeatController">
    <children>
-      <AnchorPane layoutX="216.0" layoutY="-76.0" prefHeight="478.0" prefWidth="575.0">
+      <AnchorPane layoutX="216.0" layoutY="-45.0" prefHeight="459.0" prefWidth="575.0">
          <children>
             <Line endX="508.20703125" endY="-0.5" layoutX="54.0" layoutY="432.0" startX="2.5" stroke="#b29292" />
-            <Line endX="498.9140625" endY="19.79290771484375" layoutX="64.0" layoutY="411.0" startX="497.70703125" startY="-333.29290771484375" stroke="#b29292" />
-            <Line endX="396.0" endY="1.0" layoutX="165.0" layoutY="76.0" startX="-110.5" startY="-1.0" stroke="#b29292" />
+            <Line endX="498.9140625" endY="19.79290771484375" layoutX="64.0" layoutY="411.0" startX="497.5" startY="-336.5" stroke="#b29292" />
+            <Line endX="396.0" endY="-1.0" layoutX="165.0" layoutY="76.0" startX="-110.5" startY="-1.0" stroke="#b29292" />
             <Line endX="-100.0" endY="319.0" layoutX="155.0" layoutY="114.0" startX="-101.0" startY="-38.5" stroke="#b29e9e" />
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="160.0">
                <image>
@@ -38,14 +38,14 @@
                   <Image url="@seatImage/abcde/d.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="518.0" layoutY="77.0">
+            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="518.0" layoutY="75.0">
                <image>
-                  <Image url="@../../../../../../Users/shkg1/Downloads/exit.png" />
+                  <Image url="@seatImage/etcImage/exit.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="55.0" layoutY="383.0">
                <image>
-                  <Image url="@../../../../../../Users/shkg1/Downloads/exit.png" />
+                  <Image url="@seatImage/etcImage/exit.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="76.0" opacity="0.89" prefHeight="70.0" prefWidth="426.0" style="-fx-background-color: #ECEBFF;" text="S C R E E N" textFill="#3e64bc80">
@@ -61,11 +61,8 @@
                </image>
             </ImageView>
             </graphic>
-               <toggleGroup>
-                  <ToggleGroup fx:id="seatGroup" />
-               </toggleGroup>
             </ToggleButton>
-            <ToggleButton fx:id="aa2" layoutX="136.0" layoutY="160.0" mnemonicParsing="false" onAction="#a2" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="aa2" layoutX="136.0" layoutY="160.0" mnemonicParsing="false" onAction="#a2" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -74,7 +71,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa3" layoutX="227.0" layoutY="160.0" mnemonicParsing="false" onAction="#a3" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="aa3" layoutX="227.0" layoutY="160.0" mnemonicParsing="false" onAction="#a3" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -83,7 +80,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa4" layoutX="273.0" layoutY="160.0" mnemonicParsing="false" onAction="#a4" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="aa4" layoutX="273.0" layoutY="160.0" mnemonicParsing="false" onAction="#a4" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -92,7 +89,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa5" layoutX="319.0" layoutY="160.0" mnemonicParsing="false" onAction="#a5" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="aa5" layoutX="319.0" layoutY="160.0" mnemonicParsing="false" onAction="#a5" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -101,7 +98,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa6" layoutX="410.0" layoutY="160.0" mnemonicParsing="false" onAction="#a6" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="aa6" layoutX="410.0" layoutY="160.0" mnemonicParsing="false" onAction="#a6" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -110,7 +107,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa7" layoutX="456.0" layoutY="160.0" mnemonicParsing="false" onAction="#a7" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="aa7" layoutX="456.0" layoutY="160.0" mnemonicParsing="false" onAction="#a7" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -119,7 +116,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb1" layoutX="90.0" layoutY="220.0" mnemonicParsing="false" onAction="#b1" prefHeight="30.0" prefWidth="30.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="bb1" layoutX="90.0" layoutY="220.0" mnemonicParsing="false" onAction="#b1" prefHeight="30.0" prefWidth="30.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -128,7 +125,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb2" layoutX="136.0" layoutY="220.0" mnemonicParsing="false" onAction="#b2" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="bb2" layoutX="136.0" layoutY="220.0" mnemonicParsing="false" onAction="#b2" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -137,7 +134,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb3" layoutX="227.0" layoutY="220.0" mnemonicParsing="false" onAction="#b3" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="bb3" layoutX="227.0" layoutY="220.0" mnemonicParsing="false" onAction="#b3" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -146,7 +143,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb4" layoutX="273.0" layoutY="220.0" mnemonicParsing="false" onAction="#b4" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="bb4" layoutX="273.0" layoutY="220.0" mnemonicParsing="false" onAction="#b4" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -155,7 +152,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb5" layoutX="319.0" layoutY="220.0" mnemonicParsing="false" onAction="#b5" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="bb5" layoutX="319.0" layoutY="220.0" mnemonicParsing="false" onAction="#b5" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -164,7 +161,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb6" layoutX="410.0" layoutY="220.0" mnemonicParsing="false" onAction="#b6" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="bb6" layoutX="410.0" layoutY="220.0" mnemonicParsing="false" onAction="#b6" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -173,7 +170,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb7" layoutX="456.0" layoutY="220.0" mnemonicParsing="false" onAction="#b7" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="bb7" layoutX="456.0" layoutY="220.0" mnemonicParsing="false" onAction="#b7" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -182,7 +179,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd1" layoutX="90.0" layoutY="340.0" mnemonicParsing="false" onAction="#d1" prefHeight="30.0" prefWidth="30.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="dd1" layoutX="90.0" layoutY="340.0" mnemonicParsing="false" onAction="#d1" prefHeight="30.0" prefWidth="30.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -191,7 +188,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd2" layoutX="136.0" layoutY="340.0" mnemonicParsing="false" onAction="#d2" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="dd2" layoutX="136.0" layoutY="340.0" mnemonicParsing="false" onAction="#d2" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -200,7 +197,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd3" layoutX="227.0" layoutY="340.0" mnemonicParsing="false" onAction="#d3" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="dd3" layoutX="227.0" layoutY="340.0" mnemonicParsing="false" onAction="#d3" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -209,7 +206,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd4" layoutX="273.0" layoutY="340.0" mnemonicParsing="false" onAction="#d4" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="dd4" layoutX="273.0" layoutY="340.0" mnemonicParsing="false" onAction="#d4" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -218,7 +215,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd5" layoutX="319.0" layoutY="340.0" mnemonicParsing="false" onAction="#d5" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="dd5" layoutX="319.0" layoutY="340.0" mnemonicParsing="false" onAction="#d5" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -227,7 +224,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd6" layoutX="410.0" layoutY="340.0" mnemonicParsing="false" onAction="#d6" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="dd6" layoutX="410.0" layoutY="340.0" mnemonicParsing="false" onAction="#d6" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -236,7 +233,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd7" layoutX="456.0" layoutY="340.0" mnemonicParsing="false" onAction="#d7" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="dd7" layoutX="456.0" layoutY="340.0" mnemonicParsing="false" onAction="#d7" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -245,7 +242,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc1" layoutX="90.0" layoutY="280.0" mnemonicParsing="false" onAction="#c1" prefHeight="30.0" prefWidth="30.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="cc1" layoutX="90.0" layoutY="280.0" mnemonicParsing="false" onAction="#c1" prefHeight="30.0" prefWidth="30.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -254,7 +251,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc2" layoutX="136.0" layoutY="280.0" mnemonicParsing="false" onAction="#c2" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="cc2" layoutX="136.0" layoutY="280.0" mnemonicParsing="false" onAction="#c2" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -263,7 +260,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc3" layoutX="227.0" layoutY="280.0" mnemonicParsing="false" onAction="#c3" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="cc3" layoutX="227.0" layoutY="280.0" mnemonicParsing="false" onAction="#c3" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -272,7 +269,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc4" layoutX="273.0" layoutY="280.0" mnemonicParsing="false" onAction="#c4" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="cc4" layoutX="273.0" layoutY="280.0" mnemonicParsing="false" onAction="#c4" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -281,7 +278,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc5" layoutX="319.0" layoutY="280.0" mnemonicParsing="false" onAction="#c5" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="cc5" layoutX="319.0" layoutY="280.0" mnemonicParsing="false" onAction="#c5" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -290,7 +287,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc6" layoutX="410.0" layoutY="280.0" mnemonicParsing="false" onAction="#c6" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="cc6" layoutX="410.0" layoutY="280.0" mnemonicParsing="false" onAction="#c6" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -299,7 +296,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc7" layoutX="456.0" layoutY="280.0" mnemonicParsing="false" onAction="#c7" prefHeight="30.0" prefWidth="44.0" toggleGroup="$seatGroup">
+            <ToggleButton fx:id="cc7" layoutX="456.0" layoutY="280.0" mnemonicParsing="false" onAction="#c7" prefHeight="30.0" prefWidth="44.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -310,9 +307,9 @@
             </ToggleButton>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="180.0" onMouseClicked="#a1">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="180.0" onMouseClicked="#a1" smooth="false">
          <image>
-            <Image url="@seatImage/whiteNum/free-icon-block.png" />
+            <Image url="@seatImage/etcImage/free-icon-black.png" />
          </image>
       </ImageView>
       <Label layoutX="850.0" layoutY="100.0" text="빈 좌석">
@@ -337,7 +334,7 @@
          </font>
       </Label>
       <Label layoutX="28.0" layoutY="94.0" text="성 인" />
-      <Label layoutX="20.0" layoutY="131.0" text="청 소 년" />
+      <Label layoutX="20.0" layoutY="154.0" text="청 소 년" />
       <Button layoutX="19.0" layoutY="362.0" mnemonicParsing="false" onAction="#fxMvChoice" text="영화선택" />
       <Button layoutX="139.0" layoutY="362.0" mnemonicParsing="false" onAction="#fxPayWith" text="결제선택" />
       <Label layoutX="27.0" layoutY="253.0" text="총 결제금액">
@@ -345,7 +342,7 @@
             <Font size="31.0" />
          </font>
       </Label>
-      <Label layoutX="91.0" layoutY="307.0" text="22,000">
+      <Label fx:id="fxAmount" layoutX="91.0" layoutY="307.0" text="0">
          <font>
             <Font size="23.0" />
          </font>
@@ -355,9 +352,9 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="140.0">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="140.0" smooth="false">
          <image>
-            <Image url="@seatImage/blueNum/free-icon-null.png" />
+            <Image url="@seatImage/etcImage/free-icon-null.png" />
          </image>
       </ImageView>
       <ToggleButton layoutX="70.0" layoutY="90.0" mnemonicParsing="false" onAction="#fxAdt0" selected="true" text="0">
@@ -367,22 +364,28 @@
       <ToggleButton layoutX="142.0" layoutY="90.0" mnemonicParsing="false" onAction="#fxAdt3" text="3" toggleGroup="$adtGroup" />
       <ToggleButton layoutX="94.0" layoutY="90.0" mnemonicParsing="false" onAction="#fxAdt1" text="1" toggleGroup="$adtGroup" />
       <ToggleButton layoutX="118.0" layoutY="90.0" mnemonicParsing="false" onAction="#fxAdt2" prefHeight="23.0" prefWidth="1.0" text="2" toggleGroup="$adtGroup" />
-      <ToggleButton layoutX="70.0" layoutY="127.0" mnemonicParsing="false" onAction="#fxCdr0" selected="true" text="0">
+      <ToggleButton layoutX="70.0" layoutY="150.0" mnemonicParsing="false" onAction="#fxCdr0" selected="true" text="0">
          <toggleGroup>
             <ToggleGroup fx:id="cdrGroup" />
          </toggleGroup></ToggleButton>
-      <ToggleButton layoutX="142.0" layoutY="127.0" mnemonicParsing="false" onAction="#fxCdr3" text="3" toggleGroup="$cdrGroup" />
-      <ToggleButton layoutX="94.0" layoutY="127.0" mnemonicParsing="false" onAction="#fxCdr1" text="1" toggleGroup="$cdrGroup" />
-      <ToggleButton layoutX="118.0" layoutY="127.0" mnemonicParsing="false" onAction="#fxCdr2" prefHeight="23.0" prefWidth="1.0" text="2" toggleGroup="$cdrGroup" />
+      <ToggleButton layoutX="142.0" layoutY="150.0" mnemonicParsing="false" onAction="#fxCdr3" text="3" toggleGroup="$cdrGroup" />
+      <ToggleButton layoutX="94.0" layoutY="150.0" mnemonicParsing="false" onAction="#fxCdr1" text="1" toggleGroup="$cdrGroup" />
+      <ToggleButton layoutX="118.0" layoutY="150.0" mnemonicParsing="false" onAction="#fxCdr2" prefHeight="23.0" prefWidth="1.0" text="2" toggleGroup="$cdrGroup" />
       <Label layoutX="850.0" layoutY="180.0" text="예약 좌석">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="100.0">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="100.0" smooth="false">
          <image>
             <Image url="@seatImage/whiteNum/free-icon-null.png" />
          </image>
       </ImageView>
+      <Label layoutX="28.0" layoutY="123.0" text="금 액" />
+      <Label layoutX="68.0" layoutY="123.0" text="15,000 X" />
+      <Label fx:id="fxAdtPrice" layoutX="123.0" layoutY="123.0" text="0 = 00,000 원" />
+      <Label layoutX="27.0" layoutY="180.0" text="금 액" />
+      <Label layoutX="68.0" layoutY="180.0" text="10,000 X" />
+      <Label fx:id="fxCdrPrice" layoutX="123.0" layoutY="180.0" text="0 = 00,000 원" />
    </children>
 </AnchorPane>

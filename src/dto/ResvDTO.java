@@ -1,7 +1,10 @@
 package dto;
 
+import java.util.ArrayList;
+
 public class ResvDTO {
-	private String title,id,resvNo,resvDate,theater,seatNum,PaymentDay,payWith;
+	private String title,id,resvNo,resvDate,theater,PaymentDay,payWith;
+	private ArrayList<String> seatNum;
 	private int amount;
 	public String getTitle() {
 		return title;
@@ -33,10 +36,10 @@ public class ResvDTO {
 	public void setTheater(String theater) {
 		this.theater = theater;
 	}
-	public String getSeatNum() {
+	public ArrayList<String> getSeatNum() {
 		return seatNum;
 	}
-	public void setSeatNum(String seatNum) {
+	public void setSeatNum(ArrayList<String> seatNum) {
 		this.seatNum = seatNum;
 	}
 	public String getPaymentDay() {

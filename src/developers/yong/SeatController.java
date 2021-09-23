@@ -24,18 +24,18 @@ public class SeatController implements Initializable{
 	public void d1() {srs.d1();}public void d2() {srs.d2();}public void d3() {srs.d3();}
 	public void d4() {srs.d4();}public void d5() {srs.d5();}public void d6() {srs.d6();}public void d7() {srs.d7();}
 
-	public void fxAdt0() {}
-	public void fxAdt1() {}
-	public void fxAdt2() {}
-	public void fxAdt3() {}
+	public void fxAdt0() {srs.adt0();}
+	public void fxAdt1() {srs.adt1();}
+	public void fxAdt2() {srs.adt2();}
+	public void fxAdt3() {srs.adt3();}
 	
-	public void fxCdr0() {}
-	public void fxCdr1() {}
-	public void fxCdr2() {}
-	public void fxCdr3() {}
+	public void fxCdr0() {srs.cdr0();}
+	public void fxCdr1() {srs.cdr1();}
+	public void fxCdr2() {srs.cdr2();}
+	public void fxCdr3() {srs.cdr3();}
 	
 	public void fxMvChoice(){}
-	public void fxPayWith(){}
+	public void fxPayWith(){srs.payChoice();}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
