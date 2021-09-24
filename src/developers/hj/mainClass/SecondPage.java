@@ -17,11 +17,12 @@ public class SecondPage {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		
 		Scene scene = new Scene(root);
 		SController ctl = loader.getController();
 		ctl.setRoot(root);
-
+		
+		adminStage.setTitle("관리자 페이지");
 		adminStage.setScene(scene);
 		adminStage.show();
 

@@ -17,7 +17,7 @@ public class FController implements Initializable {
 		this.root = root;
 		as.setRoot(root);
 	}
-
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		as = new AdminServiceImpl();

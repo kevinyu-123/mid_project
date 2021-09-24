@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="681.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.hj.Controller.MovieController">
+   <children>
+      <Label layoutX="131.0" layoutY="36.0" prefHeight="56.0" prefWidth="238.0" text="영화 정보 입력 창">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="131.0" text="영화 이름" />
+      <Label layoutX="77.0" layoutY="570.0" text="등급" />
+      <Label layoutX="77.0" layoutY="303.0" text="상영시간" />
+      <Label layoutX="77.0" layoutY="375.0" text="개봉 일" />
+      <Label layoutX="77.0" layoutY="437.0" text="감독" />
+      <Label layoutX="77.0" layoutY="246.0" text="국가" />
+      <Label layoutX="77.0" layoutY="186.0" text="영화 정보" />
+      <Label layoutX="77.0" layoutY="502.0" text="출연진" />
+      <TextField fx:id="movieName" layoutX="197.0" layoutY="126.0" />
+      <TextField fx:id="movieActor" layoutX="197.0" layoutY="497.0" />
+      <TextField fx:id="movieDir" layoutX="197.0" layoutY="432.0" />
+      <TextField fx:id="movieRt" layoutX="197.0" layoutY="298.0" />
+      <TextField fx:id="movieNation" layoutX="197.0" layoutY="241.0" />
+      <TextField fx:id="movieInfo" layoutX="197.0" layoutY="181.0" />
+      <TextField fx:id="movieRate" layoutX="197.0" layoutY="565.0" />
+      <Button layoutX="312.0" layoutY="611.0" mnemonicParsing="false" onAction="#movieSave" prefHeight="45.0" prefWidth="114.0" text="저장" />
+      <DatePicker fx:id="movieRd" layoutX="197.0" layoutY="361.0" />
+      <Button mnemonicParsing="false" text="Button" />
+      <Button fx:id="close" layoutX="70.0" layoutY="611.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="114.0" text="닫기" />
+   </children>
+</AnchorPane>

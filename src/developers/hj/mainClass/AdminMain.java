@@ -21,7 +21,8 @@ public class AdminMain {
 		Scene scene = new Scene(root);
 		FController ctl = loader.getController();
 		ctl.setRoot(root);
-
+		
+		adminStage.setTitle("관리자 로그인");
 		adminStage.setScene(scene);
 		adminStage.show();
 
