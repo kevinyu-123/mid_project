@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import common.ComService;
-import common.ComServiceImpl;
+import common.ComService;
 import dto.ResvDTO;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -115,118 +115,118 @@ public class SeatResvServiceImpl implements SeatResvService{
 	public void a1() {
 		ToggleButton btnA1 = (ToggleButton)root.lookup("#aa1");String alp = "a";String num = "1"; 
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA1,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가"); seatlistDelete(btnA1,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가"); seatlistDelete(btnA1,alp,num);}}
 	public void a2() {
 		ToggleButton btnA2 =(ToggleButton)root.lookup("#aa2");String alp = "a";String num = "2";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA2,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA2,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA2,alp,num);}}
 	public void a3() {
 		ToggleButton btnA3 = (ToggleButton)root.lookup("#aa3");String alp = "a";String num = "3";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA3,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA3,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA3,alp,num);}}
 	public void a4() {
 		ToggleButton btnA4 = (ToggleButton)root.lookup("#aa4");String alp = "a";String num = "4";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA4,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA4,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA4,alp,num);}}
 	public void a5() {
 		ToggleButton btnA5 = (ToggleButton)root.lookup("#aa5");String alp = "a";String num = "5";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA5,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA5,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA5,alp,num);}}
 	public void a6() {
 		ToggleButton btnA6 = (ToggleButton)root.lookup("#aa6");String alp = "a";String num = "6";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA6,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA6,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA6,alp,num);}}
 	public void a7() {
 		ToggleButton btnA7 = (ToggleButton)root.lookup("#aa7");String alp = "a";String num = "7";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA7,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA7,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnA7,alp,num);}}
 	
 	public void b1() {
 		ToggleButton btnB1 = (ToggleButton)root.lookup("#bb1");String alp = "b";String num = "1"; 
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnB1,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB1,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB1,alp,num);}}
 	public void b2() {
 		ToggleButton btnB2 = (ToggleButton)root.lookup("#bb2");String alp = "b";String num = "2";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnB2,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB2,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB2,alp,num);}}
 	public void b3() {
 		ToggleButton btnB3 = (ToggleButton)root.lookup("#bb3");String alp = "b";String num = "3";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnB3,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB3,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB3,alp,num);}}
 	public void b4() {
 		ToggleButton btnB4 = (ToggleButton)root.lookup("#bb4");String alp = "b";String num = "4";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnB4,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB4,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB4,alp,num);}}
 	public void b5() {
 		ToggleButton btnB5 = (ToggleButton)root.lookup("#bb5");String alp = "b";String num = "5";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnB5,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB5,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB5,alp,num);}}
 	public void b6() {
 		ToggleButton btnB6 = (ToggleButton)root.lookup("#bb6");String alp = "b";String num = "6";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnB6,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB6,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB6,alp,num);}}
 	public void b7() {
 		ToggleButton btnB7 = (ToggleButton)root.lookup("#bb7");String alp = "b";String num = "7";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnB7,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB7,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnB7,alp,num);}}
 	
 	public void c1() {
 		ToggleButton btnC1 = (ToggleButton)root.lookup("#cc1");String alp = "c";String num = "1";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnC1,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC1,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC1,alp,num);}}
 	public void c2() {
 		ToggleButton btnC2 = (ToggleButton)root.lookup("#cc2");String alp = "c";String num = "2";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnC2,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC2,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC2,alp,num);}}
 	public void c3() {
 		ToggleButton btnC3 = (ToggleButton)root.lookup("#cc3");String alp = "c";String num = "3";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnC3,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC3,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC3,alp,num);}}
 	public void c4() {
 		ToggleButton btnC4 = (ToggleButton)root.lookup("#cc4");String alp = "c";String num = "4";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnC4,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC4,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC4,alp,num);}}
 	public void c5() {
 		ToggleButton btnC5 = (ToggleButton)root.lookup("#cc5");String alp = "c";String num = "5";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnC5,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC5,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC5,alp,num);}}
 	public void c6() {
 		ToggleButton btnC6 = (ToggleButton)root.lookup("#cc6");String alp = "c";String num = "6";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnC6,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC6,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC6,alp,num);}}
 	public void c7() {
 		ToggleButton btnC7 = (ToggleButton)root.lookup("#cc7");String alp = "c";String num = "7";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnC7,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC7,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnC7,alp,num);}}
 	
 	public void d1() {
 		ToggleButton btnD1 = (ToggleButton)root.lookup("#dd1");String alp = "d";String num = "1";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnD1,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD1,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD1,alp,num);}}
 	public void d2() {
 		ToggleButton btnD2 = (ToggleButton)root.lookup("#dd2");String alp = "d";String num = "2";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnD2,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD2,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD2,alp,num);}}
 	public void d3() {
 		ToggleButton btnD3 = (ToggleButton)root.lookup("#dd3");String alp = "d";String num = "3";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnD3,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD3,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD3,alp,num);}}
 	public void d4() {
 		ToggleButton btnD4 = (ToggleButton)root.lookup("#dd4");String alp = "d";String num = "4";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnD4,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD4,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD4,alp,num);}}
 	public void d5() {
 		ToggleButton btnD5 = (ToggleButton)root.lookup("#dd5");String alp = "d";String num = "5";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnD5,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD5,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD5,alp,num);}}
 	public void d6() {
 		ToggleButton btnD6 = (ToggleButton)root.lookup("#dd6");String alp = "d";String num = "6";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnD6,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD6,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD6,alp,num);}}
 	public void d7() {
 		ToggleButton btnD7 = (ToggleButton)root.lookup("#dd7");String alp = "d";String num = "7";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnD7,alp,num);}
-		else {ComServiceImpl.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD7,alp,num);}}
+		else {ComService.Alart(allTicket+"좌석 이상 선택 불가");seatlistDelete(btnD7,alp,num);}}
 
 	
 

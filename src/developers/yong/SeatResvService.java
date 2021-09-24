@@ -20,7 +20,6 @@ public interface SeatResvService {
 	// 결제 선택 메뉴로 들어가기
 	public ResvDTO payChoice();
 	//좌석 선택
-
 	//좌석 클릭 이미지 변경
 	public void a1();public void a2();public void a3();public void a4();public void a5();public void a6();public void a7();
 	public void b1();public void b2();public void b3();public void b4();public void b5();public void b6();public void b7();

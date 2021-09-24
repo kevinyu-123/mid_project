@@ -328,7 +328,7 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <Label layoutX="21.0" layoutY="60.0" text="인원(최대 4매)">
+      <Label layoutX="21.0" layoutY="60.0" text="인원(최대 6매)">
          <font>
             <Font size="15.0" />
          </font>
