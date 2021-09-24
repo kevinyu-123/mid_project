@@ -307,7 +307,7 @@
             </ToggleButton>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="180.0" onMouseClicked="#a1" smooth="false">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="180.0" smooth="false">
          <image>
             <Image url="@seatImage/etcImage/free-icon-black.png" />
          </image>
