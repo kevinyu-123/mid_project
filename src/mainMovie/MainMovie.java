@@ -1,7 +1,6 @@
 package mainMovie;
 
 import db.DBService;
-
 import dto.MovieDTO;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
