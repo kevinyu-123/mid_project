@@ -1,12 +1,12 @@
 package dto;
 
-public class MovieDTO {
+public class MovieDTO { //제목, 개요, 국가, 감독, 등장인물, 등급, 개봉날짜
 	private String title,infomation,nation,director,actor,filmRate,MovieDate;
 	public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {
-		this.title = title;
+		this.title = title; 
 	}
 	public String getInfomation() {
 		return infomation;

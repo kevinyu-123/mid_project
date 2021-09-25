@@ -13,23 +13,18 @@
 	xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="mainMovie.MainController">
 	<children>
-		<Label layoutX="260.0" layoutY="18.0" text="님 환영합니다!"
+		<Label layoutX="296.0" layoutY="23.0" text="환영합니다!"
 			textFill="WHITE">
 			<font>
 				<Font size="26.0" />
 			</font>
 		</Label>
-		<Label fx:id="fxName" layoutX="200.0" layoutY="18.0"
-			prefHeight="31.0" prefWidth="67.0" text="name" textFill="WHITE">
-			<font>
-				<Font size="25.0" />
-			</font>
-		</Label>
 		<Button fx:id="btn01" layoutX="22.0" layoutY="50.0"
-			mnemonicParsing="false" onAction="#gotoDetail" prefHeight="180.0"
-			prefWidth="125.0" style="-fx-background-color: black;">
+			mnemonicParsing="false" onAction="#gotoDetail01"
+			onMouseClicked="#gotoDetail01" prefHeight="180.0" prefWidth="125.0"
+			style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
+				<ImageView fx:id="img1" fitHeight="181.0" fitWidth="112.0"
 					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image1.jpeg" />
@@ -37,38 +32,34 @@
 				</ImageView>
 			</graphic>
 		</Button>
-		<Button fx:id="btn02" layoutX="159.0" layoutY="55.0"
-			mnemonicParsing="false" prefHeight="171.0" prefWidth="121.0"
-			style="-fx-background-color: black;">
+		<Button fx:id="btn02" layoutX="159.0" layoutY="54.0"
+			mnemonicParsing="false" onAction="#gotoDetail02" prefHeight="171.0"
+			prefWidth="121.0" style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onMouseClicked="#gotoDetail" pickOnBounds="true"
-					preserveRatio="true">
+				<ImageView fx:id="img2" fitHeight="181.0" fitWidth="112.0"
+					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image2.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
 		</Button>
-		<Button fx:id="btn03" layoutX="299.0" layoutY="62.0"
-			mnemonicParsing="false" onAction="#gotoDetail"
-			style="-fx-background-color: black;">
+		<Button fx:id="btn03" layoutX="300.0" layoutY="54.0"
+			mnemonicParsing="false" onAction="#gotoDetail03">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onMouseClicked="#gotoDetail" pickOnBounds="true"
-					preserveRatio="true">
+				<ImageView fx:id="img3" fitHeight="181.0" fitWidth="112.0"
+					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image3.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
 		</Button>
-		<Button fx:id="btn08" layoutX="299.0" layoutY="236.0"
-			mnemonicParsing="false" prefHeight="142.0" prefWidth="130.0"
-			style="-fx-background-color: black;">
+		<Button fx:id="btn08" layoutX="300.0" layoutY="242.0"
+			mnemonicParsing="false" onAction="#gotoDetail08" prefHeight="142.0"
+			prefWidth="130.0" style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onDragDetected="#gotoDetail" onMouseClicked="#gotoDetail"
+				<ImageView fx:id="img8" fitHeight="181.0" fitWidth="112.0"
 					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image8.jpeg" />
@@ -77,25 +68,23 @@
 			</graphic>
 		</Button>
 		<Button fx:id="btn04" layoutX="441.0" layoutY="54.0"
-			mnemonicParsing="false" onAction="#gotoDetail"
+			mnemonicParsing="false" onAction="#gotoDetail04"
 			style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onMouseClicked="#gotoDetail" pickOnBounds="true"
-					preserveRatio="true">
+				<ImageView fx:id="img4" fitHeight="181.0" fitWidth="112.0"
+					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image4.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
 		</Button>
-		<Button layoutX="22.0" layoutY="239.0" mnemonicParsing="false"
+		<Button fx:id="btn06" layoutX="22.0" layoutY="239.0"
+			mnemonicParsing="false" onAction="#gotoDetail06"
 			style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fx:id="btn06" fitHeight="181.0"
-					fitWidth="112.0" onDragDetected="#gotoDetail"
-					onMouseClicked="#gotoDetail" pickOnBounds="true"
-					preserveRatio="true">
+				<ImageView fx:id="img6" fitHeight="181.0" fitWidth="112.0"
+					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image6.jpeg" />
 					</image>
@@ -103,10 +92,10 @@
 			</graphic>
 		</Button>
 		<Button fx:id="btn07" layoutX="159.0" layoutY="239.0"
-			mnemonicParsing="false" style="-fx-background-color: black;">
+			mnemonicParsing="false" onAction="#gotoDetail07"
+			style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onDragDetected="#gotoDetail" onMouseClicked="#gotoDetail"
+				<ImageView fx:id="img7" fitHeight="181.0" fitWidth="112.0"
 					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image7.jpeg" />
@@ -114,13 +103,12 @@
 				</ImageView>
 			</graphic>
 		</Button>
-		<Button fx:id="btn09" layoutX="441.0" layoutY="239.0"
-			mnemonicParsing="false" onAction="#gotoDetail"
+		<Button fx:id="btn09" layoutX="441.0" layoutY="242.0"
+			mnemonicParsing="false" onAction="#gotoDetail09"
 			style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onMouseClicked="#gotoDetail" pickOnBounds="true"
-					preserveRatio="true">
+				<ImageView fx:id="img9" fitHeight="181.0" fitWidth="112.0"
+					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image9.jpeg" />
 					</image>
@@ -128,25 +116,23 @@
 			</graphic>
 		</Button>
 		<Button fx:id="btn10" layoutX="572.0" layoutY="239.0"
-			mnemonicParsing="false" onAction="#gotoDetail"
+			mnemonicParsing="false" onAction="#gotoDetail10"
 			style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onMouseClicked="#gotoDetail" pickOnBounds="true"
-					preserveRatio="true">
+				<ImageView fx:id="img10" fitHeight="181.0"
+					fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image10.jpeg" />
 					</image>
 				</ImageView>
 			</graphic>
 		</Button>
-		<Button fx:id="btn05" layoutX="572.0" layoutY="63.0"
-			mnemonicParsing="false" onAction="#gotoDetail"
+		<Button fx:id="btn05" layoutX="572.0" layoutY="55.0"
+			mnemonicParsing="false" onAction="#gotoDetail05"
 			style="-fx-background-color: black;">
 			<graphic>
-				<ImageView fitHeight="181.0" fitWidth="112.0"
-					onMouseClicked="#gotoDetail" pickOnBounds="true"
-					preserveRatio="true">
+				<ImageView fx:id="img5" fitHeight="181.0" fitWidth="112.0"
+					pickOnBounds="true" preserveRatio="true">
 					<image>
 						<Image url="@../image/image5.jpeg" />
 					</image>

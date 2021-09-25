@@ -1,12 +1,10 @@
 package mainMovie;
 
 
+import detail.detail01;
 import javafx.scene.Parent;
 
-
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -17,11 +15,11 @@ public class MediaServiceImpl implements MediaService {
 	MediaPlayer mediaPlayer;
 	 MediaView mediaView;
 	Button btnPlay, btnStop, btnPause;
-	Label movieTitle, movieDate, movieInfomation, movieNation, movieDirector, movieActor, movieFilmrate;
-
-
+	
+	
+	
 	@Override
-	public void myStart() {
+	public void myPlay() {
 		mediaPlayer.play();
 	}
 
@@ -37,6 +35,7 @@ public class MediaServiceImpl implements MediaService {
 
 	@Override
 	public void setMedia(Parent root, String mediaName) {
+		System.out.println("ddd");
 		setControll(root);
 		Media media = new Media(getClass().getResource(mediaName).toString());
 		mediaPlayer = new MediaPlayer(media);
@@ -48,11 +47,9 @@ public class MediaServiceImpl implements MediaService {
 			btnPause.setDisable(true);
 		});
 		mediaPlayer.setOnPlaying(() -> {
-
 			btnPlay.setDisable(true);
 			btnStop.setDisable(false);
 			btnPause.setDisable(false);
-
 		});
 		mediaPlayer.setOnStopped(() -> {
 			btnPlay.setDisable(false);
@@ -78,15 +75,7 @@ public class MediaServiceImpl implements MediaService {
 		btnStop = (Button) root.lookup("#btnStop");
 		btnPause = (Button) root.lookup("#btnPause");
 
-		movieTitle = (Label) root.lookup("#movieTitle");
-		movieDate = (Label) root.lookup("#movieDate");
-		movieInfomation = (Label) root.lookup("#movieInfomation");
-		movieNation = (Label) root.lookup("#movieNation");
-		movieDirector = (Label) root.lookup("#movieDirector");
-		movieActor = (Label) root.lookup("#movieActor");
-		movieFilmrate = (Label) root.lookup("#movieFilmrate");
-	
 	}
-	
+		 
+	}
 
-}
