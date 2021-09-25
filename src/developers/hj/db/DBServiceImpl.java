@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import db.DBCommon;
+import common.DBCommon;
 import dto.AdminDTO;
 import dto.MemberDTO;
 import dto.MovieDTO;

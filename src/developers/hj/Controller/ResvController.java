@@ -1,8 +1,9 @@
 package developers.hj.Controller;
 
 import java.net.URL;
+
 import java.util.ResourceBundle;
-import db.DBCommon;
+import common.DBCommon;
 import developers.hj.service.AdminService;
 import developers.hj.service.AdminServiceImpl;
 import javafx.fxml.Initializable;
