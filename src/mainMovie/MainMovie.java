@@ -10,7 +10,8 @@ import javafx.stage.Stage;
 
 public class MainMovie extends Application {
 	DBService db = new DBService();
-	MovieDTO dto = db.selectSQL(null) ;
+	MovieDTO dto = db.selectSQL(null);
+	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("mainMovie.fxml"));

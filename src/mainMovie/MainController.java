@@ -2,9 +2,7 @@ package mainMovie;
 
 
 import java.net.URL;
-
-
-
+import java.text.ParseException;
 import java.util.ResourceBundle;
 
 import db.DBService;
@@ -32,8 +30,10 @@ public class MainController implements Initializable {
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-	
-	public void gotoDetail01(  ) {
+	public void gotoMyPage() {
+		System.out.println("마이페이지로 이동");
+	}
+	public void gotoDetail01(  ) throws ParseException {
 		detail01 d = new detail01();
 		d.start();
 		System.out.println("디테일페이지로01");

@@ -13,13 +13,13 @@
 	style="-fx-background-color: black;"
 	xmlns="http://javafx.com/javafx/8.0.171"
 	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="detail.Controller.DetailController06">
+	fx:controller="detail.Controller.DetailController05">
 	<children>
 		<ImageView fx:id="img" fitHeight="482.0" fitWidth="330.0"
 			layoutX="47.0" layoutY="50.0" pickOnBounds="true"
 			preserveRatio="true">
 			<image>
-				<Image url="@../../image/image6.jpeg" />
+				<Image url="@../../image/image5.jpeg" />
 			</image>
 		</ImageView>
 		<Label fx:id="movieTitle" layoutX="427.0" layoutY="41.0"
@@ -107,22 +107,49 @@
 			</font>
 		</Label>
 		<MediaView fx:id="fxMediaView" fitHeight="650.0"
-			fitWidth="900.0" layoutX="447.0" layoutY="87.0" />
+			fitWidth="900.0" layoutX="444.0" layoutY="93.0" />
 		<Button layoutX="1077.0" layoutY="792.0"
 			mnemonicParsing="false" onAction="#gotoSeatPage" prefHeight="55.0"
 			prefWidth="231.0" text="좌석선택 및 결제하기" />
 		<Button layoutX="778.0" layoutY="792.0" mnemonicParsing="false"
 			onAction="#gotoReviewPage" prefHeight="55.0" prefWidth="273.0"
 			text="선호도 &amp; 리뷰보기" />
-		<Button fx:id="btnPlay" layoutX="733.0" layoutY="672.0"
-			mnemonicParsing="false" onAction="#myPlay" prefHeight="46.0"
-			prefWidth="105.0" text="재생" />
-		<Button fx:id="btnPause" layoutX="867.0" layoutY="672.0"
-			mnemonicParsing="false" onAction="#myPause" prefHeight="46.0"
-			prefWidth="90.0" text="일시정지" />
-		<Button fx:id="btnStop" layoutX="987.0" layoutY="672.0"
+		<Button fx:id="btnPlay" layoutX="862.0" layoutY="625.0"
+			mnemonicParsing="false" onAction="#myPlay" prefHeight="74.0"
+			prefWidth="108.0" style="-fx-background-color: black;">
+			<graphic>
+				<ImageView fitHeight="64.0" fitWidth="84.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../btn_img/1.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Button fx:id="btnPause" layoutX="749.0" layoutY="626.0"
+			mnemonicParsing="false" onAction="#myPause" prefHeight="68.0"
+			prefWidth="108.0" style="-fx-background-color: black;">
+			<graphic>
+				<ImageView fitHeight="64.0" fitWidth="93.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../btn_img/2.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
+		<Button fx:id="btnStop" layoutX="985.0" layoutY="618.0"
 			mnemonicParsing="false" onAction="#myStop" prefHeight="46.0"
-			prefWidth="90.0" text="정지" />
+			prefWidth="90.0" style="-fx-background-color: black;">
+			<graphic>
+				<ImageView fitHeight="74.0" fitWidth="71.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../btn_img/3.png" />
+					</image>
+				</ImageView>
+			</graphic>
+		</Button>
 		<Label layoutX="77.0" layoutY="549.0" text="개봉날짜"
 			textFill="WHITE">
 			<font>

@@ -2,12 +2,15 @@ package detail;
 
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import db.DBService;
-import detail.Controller.DetailController01;
+
 import detail.Controller.DetailController07;
 import dto.MovieDTO;
-import javafx.application.Application;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +19,6 @@ import javafx.stage.Stage;
 
 public class detail07 {
 	DBService db = new DBService();
-	MovieDTO dto = db.selectSQL("");
 	
 	public void start()  {
 		Stage primaryStage = new Stage();
@@ -34,7 +36,7 @@ public class detail07 {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-		MovieDTO dto = db.selectSQL("보이스");
+		MovieDTO dto = db.selectSQL("아임 유어 맨");
 		DetailController07 dc = loader.getController();
 		dc.setRoot(root);
 		Label movieTitle = (Label) root.lookup("#movieTitle");
@@ -45,15 +47,25 @@ public class detail07 {
 		Label movieActor = (Label) root.lookup("#movieActor");
 		Label movieFilmrate = (Label) root.lookup("#movieFilmrate");
 		Label movieRunningtime = (Label)root.lookup("#movieRunningtime");
-		movieTitle.setText(dto.getTitle());
-		movieDate.setText(dto.getMovieDate());
-		movieInfomation.setText(dto.getInfomation());
-		movieNation.setText(dto.getNation());
-		movieDirector.setText(dto.getDirector());
-		movieActor.setText(dto.getActor());
-		movieFilmrate.setText(dto.getFilmRate());
-		movieRunningtime.setText(dto.getRunningTime()+"분");
-		
+		try {
+			SimpleDateFormat trimDate = new SimpleDateFormat("yy-MM-dd");
+			Date d;
+
+			d = trimDate.parse(dto.getMovieDate());
+			String newDate = trimDate.format(d);
+
+			movieTitle.setText(dto.getTitle());
+			movieDate.setText(newDate);
+			movieInfomation.setText(dto.getInfomation());
+			movieNation.setText(dto.getNation());
+			movieDirector.setText(dto.getDirector());
+			movieActor.setText(dto.getActor());
+			movieFilmrate.setText(dto.getFilmRate());
+			movieRunningtime.setText(dto.getRunningTime() + "분");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public static void main(String[] args) {
 		

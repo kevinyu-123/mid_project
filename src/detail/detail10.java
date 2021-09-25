@@ -2,12 +2,15 @@ package detail;
 
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import db.DBService;
-import detail.Controller.DetailController01;
+
 import detail.Controller.DetailController10;
 import dto.MovieDTO;
-import javafx.application.Application;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -38,7 +41,7 @@ public class detail10{
 		DetailController10 dc = loader.getController();
 		dc.setRoot(root);
 		
-		MovieDTO dto = db.selectSQL("test");
+		MovieDTO dto = db.selectSQL("모가디슈");
 		Label movieTitle = (Label) root.lookup("#movieTitle");
 		Label movieDate = (Label) root.lookup("#movieDate");
 		Label movieInfomation = (Label) root.lookup("#movieInfomation");
@@ -47,15 +50,25 @@ public class detail10{
 		Label movieActor = (Label) root.lookup("#movieActor");
 		Label movieFilmrate = (Label) root.lookup("#movieFilmrate");
 		Label movieRunningtime = (Label)root.lookup("#movieRunningtime");
-		movieTitle.setText(dto.getTitle());
-		movieDate.setText(dto.getMovieDate());
-		movieInfomation.setText(dto.getInfomation());
-		movieNation.setText(dto.getNation());
-		movieDirector.setText(dto.getDirector());
-		movieActor.setText(dto.getActor());
-		movieFilmrate.setText(dto.getFilmRate());
-		movieRunningtime.setText(dto.getRunningTime()+"분");
-		
+		try {
+			SimpleDateFormat trimDate = new SimpleDateFormat("yy-MM-dd");
+			Date d;
+
+			d = trimDate.parse(dto.getMovieDate());
+			String newDate = trimDate.format(d);
+
+			movieTitle.setText(dto.getTitle());
+			movieDate.setText(newDate);
+			movieInfomation.setText(dto.getInfomation());
+			movieNation.setText(dto.getNation());
+			movieDirector.setText(dto.getDirector());
+			movieActor.setText(dto.getActor());
+			movieFilmrate.setText(dto.getFilmRate());
+			movieRunningtime.setText(dto.getRunningTime() + "분");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public static void main(String[] args) {
 

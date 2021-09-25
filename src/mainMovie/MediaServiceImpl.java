@@ -35,7 +35,7 @@ public class MediaServiceImpl implements MediaService {
 
 	@Override
 	public void setMedia(Parent root, String mediaName) {
-		System.out.println("ddd");
+		System.out.println("영상ok");
 		setControll(root);
 		Media media = new Media(getClass().getResource(mediaName).toString());
 		mediaPlayer = new MediaPlayer(media);

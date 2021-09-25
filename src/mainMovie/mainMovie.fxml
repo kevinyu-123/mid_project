@@ -139,5 +139,8 @@
 				</ImageView>
 			</graphic>
 		</Button>
+		<Button fx:id="myPage" layoutX="59.0" layoutY="35.0"
+			mnemonicParsing="false" onAction="#gotoMyPage" prefHeight="39.0"
+			prefWidth="105.0" text="마이페이지" />
 	</children>
 </AnchorPane>
