@@ -3,6 +3,9 @@ package developers.yong;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import developers.yong.payment.PayResvService;
+import developers.yong.payment.PayResvServiceImpl;
+import dto.ResvDTO;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 
@@ -10,6 +13,8 @@ import javafx.scene.Parent;
 public class SeatController implements Initializable{
 	Parent root;
 	SeatResvService srs ;
+	PayResvService prs;
+	ResvDTO dto;
 	public void setRoot(Parent root) {this.root=root; srs.setRoot(root);}
 	
 	//좌석 버튼 선택
@@ -34,11 +39,16 @@ public class SeatController implements Initializable{
 	//영화선택메뉴가기
 	public void fxMvChoice(){}
 	//DTO와 같이 결제선택창으로 넘어가기
-	public void fxPayWith(){srs.payChoice();}
+	public void fxPayWith(){
+		prs.setRoot(root, srs.payChoice());
+		prs.payResvView();
+	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		srs = new SeatResvServiceImpl();
+		prs = new PayResvServiceImpl();
+		dto = new ResvDTO();
 	}
 }
 

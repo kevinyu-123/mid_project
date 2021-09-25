@@ -18,6 +18,7 @@ public class MainClass extends Application{
 		arg0.setScene(new Scene(root));
 		arg0.show();
 	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}

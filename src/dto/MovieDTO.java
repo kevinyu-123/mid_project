@@ -1,5 +1,9 @@
 package dto;
 
+import java.sql.Date;
+
+import javafx.scene.control.DatePicker;
+
 public class MovieDTO {
 	private String title,infomation,nation,director,actor,filmRate,MovieDate;
 	public String getTitle() {

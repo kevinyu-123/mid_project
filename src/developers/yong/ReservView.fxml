@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="483.0" prefWidth="393.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <Label layoutX="42.0" layoutY="27.0" text="예매상세내역" />
+      <AnchorPane layoutX="42.0" layoutY="65.0" prefHeight="344.0" prefWidth="290.0" style="-fx-background-color: gray;">
+         <children>
+            <Label layoutX="119.0" layoutY="14.0" text="티켓 정보" />
+            <Label layoutX="28.0" layoutY="45.0" text="영화이름" />
+            <Label layoutX="28.0" layoutY="70.0" text="회원 아이디" />
+            <Label layoutX="28.0" layoutY="98.0" text="예매 번호" />
+            <Label layoutX="28.0" layoutY="131.0" text="관람 일시" />
+            <Label layoutX="28.0" layoutY="166.0" text="관람 극장" />
+            <Label layoutX="28.0" layoutY="194.0" text="매수" />
+            <Label layoutX="28.0" layoutY="224.0" text="관람 좌석" />
+            <Label layoutX="28.0" layoutY="250.0" text="예매 시간" />
+            <Label layoutX="28.0" layoutY="276.0" text="결제 수단" />
+            <Label layoutX="28.0" layoutY="305.0" text="결제 금액" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="135.0" layoutY="424.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="105.0" text="예매 취소" />
+   </children>
+</AnchorPane>

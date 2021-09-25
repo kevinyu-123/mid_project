@@ -28,8 +28,8 @@ public class SeatResvServiceImpl implements SeatResvService{
 	public void ticketPriceChange() {
 		Label adtPrice = (Label)root.lookup("#fxAdtPriceChange");
 		Label cdrPrice = (Label)root.lookup("#fxCdrPriceChange");
-		adtPrice.setText(  ""+" X");
-		cdrPrice.setText(  ""+" X");
+		adtPrice.setText(""+" X");
+		cdrPrice.setText(""+" X");
 	}
 	// 성인 티켓 체크
 	public void adtPrice() {
@@ -68,7 +68,7 @@ public class SeatResvServiceImpl implements SeatResvService{
 		//dto 객체 받아서 거기에다가 저장
 		dto = new ResvDTO();
 		dto.setAmount(allAmount);
-		dto.setSeatNum(allSeatNum);
+		dto.setSeatNum(allSeatNum.toString());
 		//성인 0표 청소년 0 표 db, dto 작성 
 		return dto;
 	}

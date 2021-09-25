@@ -3,8 +3,7 @@ package dto;
 import java.util.ArrayList;
 
 public class ResvDTO {
-	private String title,id,resvNo,resvDate,theater,PaymentDay,payWith;
-	private ArrayList<String> seatNum;
+	private String title,id,resvNo,resvDate,theater,PaymentDay,payWith,seatNum,adtTicket,cdrTicket;
 	private int amount;
 	public String getTitle() {
 		return title;
@@ -17,6 +16,18 @@ public class ResvDTO {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getAdtTicket() {
+		return adtTicket;
+	}
+	public void setAdtTicket(String adtTicket) {
+		this.adtTicket = adtTicket;
+	}
+	public String getCdrTicket() {
+		return cdrTicket;
+	}
+	public void setCdrTicket(String cdrTicket) {
+		this.cdrTicket = cdrTicket;
 	}
 	public String getResvNo() {
 		return resvNo;
@@ -36,10 +47,10 @@ public class ResvDTO {
 	public void setTheater(String theater) {
 		this.theater = theater;
 	}
-	public ArrayList<String> getSeatNum() {
+	public String getSeatNum() {
 		return seatNum;
 	}
-	public void setSeatNum(ArrayList<String> seatNum) {
+	public void setSeatNum(String seatNum) {
 		this.seatNum = seatNum;
 	}
 	public String getPaymentDay() {

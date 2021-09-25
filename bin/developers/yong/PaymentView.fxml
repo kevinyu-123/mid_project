@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="578.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.yong.payment.PayResvController">
+   <children>
+      <Label layoutX="217.0" layoutY="22.0" text="결제" />
+      <AnchorPane layoutX="1.0" layoutY="66.0" prefHeight="200.0" prefWidth="457.0" style="-fx-background-color: black;" AnchorPane.topAnchor="66.0">
+         <children>
+            <Label layoutX="165.0" layoutY="51.0" prefHeight="107.0" prefWidth="219.0" text="영화 내용 " textFill="WHITE" />
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@seatImage/abcde/a.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="276.0" prefHeight="90.0" prefWidth="457.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="45.0" layoutY="8.0" text="총 결제금액" textFill="WHITE" />
+            <Label layoutX="45.0" layoutY="30.0" text="할인쿠폰/추가할인" textFill="WHITE" />
+            <Label layoutX="45.0" layoutY="66.0" text="결제필요금액" textFill="WHITE" />
+            <Line endX="365.0" layoutX="92.0" layoutY="56.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="401.0" layoutY="7.0" text="0원" textFill="WHITE" />
+            <Label layoutX="401.0" layoutY="30.0" text="0원" textFill="WHITE" />
+            <Label layoutX="401.0" layoutY="66.0" text="0원" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="377.0" prefHeight="90.0" prefWidth="457.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="205.0" layoutY="7.0" text="결제수단" textFill="WHITE" />
+            <Line endX="365.0" layoutX="92.0" layoutY="45.0" startX="-100.0" stroke="WHITE" />
+            <RadioButton layoutX="42.0" layoutY="22.0" mnemonicParsing="false" text="신용카드" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="payWith" />
+               </toggleGroup></RadioButton>
+            <RadioButton layoutX="42.0" layoutY="54.0" mnemonicParsing="false" text="카카오페이" textFill="WHITE" toggleGroup="$payWith" />
+            <RadioButton layoutX="269.0" layoutY="22.0" mnemonicParsing="false" text="무통장입금" textFill="WHITE" toggleGroup="$payWith" />
+            <RadioButton layoutX="269.0" layoutY="54.0" mnemonicParsing="false" text="Toss" textFill="WHITE" toggleGroup="$payWith" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="101.0" layoutY="489.0" mnemonicParsing="false" onAction="#fxPayButton" prefHeight="59.0" prefWidth="256.0" text="결제하기" />
+   </children>
+</AnchorPane>
