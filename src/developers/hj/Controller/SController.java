@@ -39,4 +39,7 @@ public class SController implements Initializable {
 	public void resrvInfo() {
 		as.resrvInfo();
 	}
+	public void movieUpd() {
+		as.updMoive();
+	}
 }

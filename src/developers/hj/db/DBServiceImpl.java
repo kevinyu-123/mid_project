@@ -210,4 +210,29 @@ public class DBServiceImpl implements DBService {
 		}
 		return result;
 	}
+
+	@Override
+	public ArrayList<MovieDTO> getAllMovieInfo() {
+		String sql = "SELECT * FROM movieinfo";
+		ArrayList<MovieDTO> list = new ArrayList<MovieDTO>();
+		try {
+			ps = dbCommon.con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				MovieDTO dto = new MovieDTO();
+				dto.setTitle(rs.getString("title"));
+				dto.setInfomation(rs.getString("infomation"));
+				dto.setActor(rs.getString("actor"));
+				dto.setDirector(rs.getString("director"));
+				dto.setFilmRate(rs.getString("filmrate"));
+				dto.setRunningTime(rs.getInt("runningTime"));
+				dto.setMovieDate(rs.getString("MovieDate"));
+				dto.setNation(rs.getString("nation"));
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 }

@@ -7,6 +7,7 @@ public interface AdminService {
 	public void login();
 	public void viewMem();
 	public void addMovie();
+	public void updMoive();
 	public void deleteMovie();
 	public void resrvInfo();
 	public void viewOneMem();
@@ -20,6 +21,6 @@ public interface AdminService {
 	public void showResvInfo();
 	public void cancelResv();
 	public void confirmCancel();
-
+	public void MoviedetailUpd();
 	
 }

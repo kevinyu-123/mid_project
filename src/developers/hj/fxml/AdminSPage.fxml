@@ -9,5 +9,6 @@
       <Button layoutX="46.0" layoutY="312.0" mnemonicParsing="false" onAction="#resrvInfo" prefHeight="66.0" prefWidth="175.0" text="회원 예매 현황" />
       <Button layoutX="288.0" layoutY="75.0" mnemonicParsing="false" onAction="#addMovie" prefHeight="66.0" prefWidth="175.0" text="영화 등록" />
       <Button layoutX="288.0" layoutY="312.0" mnemonicParsing="false" onAction="#deleteMovie" prefHeight="66.0" prefWidth="175.0" text="영화 삭제" />
+      <Button layoutX="288.0" layoutY="190.0" mnemonicParsing="false" onAction="#movieUpd" prefHeight="66.0" prefWidth="175.0" text="상영영화 정보 및 변경" />
    </children>
 </AnchorPane>
