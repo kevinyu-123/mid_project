@@ -3,12 +3,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="551.0" prefWidth="661.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="developers.hj.Controller.SController">
+<AnchorPane prefHeight="446.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.hj.Controller.SController">
    <children>
-      <Button layoutX="74.0" layoutY="75.0" mnemonicParsing="false" onAction="#viewMem" prefHeight="66.0" prefWidth="175.0" text="회원 정보 보기" />
-      <Button layoutX="74.0" layoutY="358.0" mnemonicParsing="false" onAction="#resrvInfo" prefHeight="66.0" prefWidth="175.0" text="회원 예매 현황" />
-      <Button layoutX="410.0" layoutY="75.0" mnemonicParsing="false" onAction="#addMovie" prefHeight="66.0" prefWidth="175.0" text="영화 등록" />
-      <Button layoutX="413.0" layoutY="358.0" mnemonicParsing="false" onAction="#deleteMovie" prefHeight="66.0" prefWidth="175.0" text="영화 삭제" />
+      <Button layoutX="46.0" layoutY="75.0" mnemonicParsing="false" onAction="#viewMem" prefHeight="66.0" prefWidth="175.0" text="회원 정보 보기" />
+      <Button layoutX="46.0" layoutY="312.0" mnemonicParsing="false" onAction="#resrvInfo" prefHeight="66.0" prefWidth="175.0" text="회원 예매 현황" />
+      <Button layoutX="288.0" layoutY="75.0" mnemonicParsing="false" onAction="#addMovie" prefHeight="66.0" prefWidth="175.0" text="영화 등록" />
+      <Button layoutX="288.0" layoutY="312.0" mnemonicParsing="false" onAction="#deleteMovie" prefHeight="66.0" prefWidth="175.0" text="영화 삭제" />
    </children>
 </AnchorPane>

@@ -109,11 +109,12 @@ public class DBServiceImpl implements DBService {
 
 	@Override
 	public MovieDTO getMovieInfo(String movieName) {
-		String sql = "SELECT * FROM movieinfo WHERE title=?";
+		String sql = "SELECT * FROM movieinfo WHERE title Like ?";
 		MovieDTO dto = null;
+		String keyword = "%"+movieName+"%";
 		try {
 			ps = dbCommon.con.prepareStatement(sql);
-			ps.setString(1, movieName);
+			ps.setString(1, keyword);
 			rs = ps.executeQuery();
 			if (rs.next()) {
 				dto = new MovieDTO();
@@ -165,6 +166,8 @@ public class DBServiceImpl implements DBService {
 				dto.setResvNo(rs.getString("resvno"));
 				dto.setSeatNum(rs.getString("seatnum"));
 				dto.setTitle(rs.getString("title"));
+				dto.setAdtTicket(rs.getString("adtticket"));
+				dto.setCdrTicket(rs.getString("cdtticket"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -179,6 +182,28 @@ public class DBServiceImpl implements DBService {
 		try {
 			ps = dbCommon.con.prepareStatement(sql);
 			ps.setString(1, id);
+			result = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public int updateResvInfo(ResvDTO dto, String uId) {
+		String sql = "UPDATE reservations SET adtticket = ?,cdtticket= ?,"
+				+ "paywith =?,amount = ?,seatnum = ?, resevdate = ? WHERE id = ? ";
+		int result = 0;
+		try {
+			ps = dbCommon.con.prepareStatement(sql);
+			ps.setInt(1, Integer.parseInt(dto.getAdtTicket()));
+			ps.setInt(2, Integer.parseInt(dto.getCdrTicket()));
+			ps.setString(3, dto.getPayWith());
+			ps.setInt(4, dto.getAmount());
+			ps.setString(5,dto.getSeatNum());
+			ps.setString(6,dto.getResvDate());
+			ps.setString(7, uId);
+			
 			result = ps.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

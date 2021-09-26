@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="300.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.hj.Controller.ResvController">
    <children>
-      <Button fx:id="b1" layoutX="28.0" layoutY="121.0" mnemonicParsing="false" onAction="#findViewId" prefHeight="68.0" prefWidth="161.0" text="예매 정보" />
+      <Button fx:id="b1" layoutX="28.0" layoutY="121.0" mnemonicParsing="false" onAction="#findViewId" prefHeight="68.0" prefWidth="161.0" text="예매 내역 및 변경" />
       <Button fx:id="b2" layoutX="239.0" layoutY="121.0" mnemonicParsing="false" onAction="#findDelId" prefHeight="68.0" prefWidth="161.0" text="예매 취소" />
    </children>
 </AnchorPane>
