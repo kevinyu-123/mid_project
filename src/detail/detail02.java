@@ -1,14 +1,15 @@
 package detail;
 
-
 import java.io.IOException;
+
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import db.DBService;
-
 import detail.Controller.DetailController02;
+
 import dto.MovieDTO;
 
 import javafx.fxml.FXMLLoader;
@@ -17,16 +18,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-
-
 public class detail02 {
 	DBService db = new DBService();
-	
-	
-	public void start()  {
+
+	public void start() {
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/detail/fxmlPages/detail02.fxml"));
-		Parent root=null;
+		Parent root = null;
 		try {
 			root = loader.load();
 		} catch (IOException e) {
@@ -39,9 +37,11 @@ public class detail02 {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-		MovieDTO dto = db.selectSQL("극장판 포켓몬스터: 정글의 아이, 코코");
+		MovieDTO dto = db.selectSQL("보이스");
+
 		DetailController02 dc = loader.getController();
 		dc.setRoot(root);
+
 		Label movieTitle = (Label) root.lookup("#movieTitle");
 		Label movieDate = (Label) root.lookup("#movieDate");
 		Label movieInfomation = (Label) root.lookup("#movieInfomation");
@@ -49,7 +49,8 @@ public class detail02 {
 		Label movieDirector = (Label) root.lookup("#movieDirector");
 		Label movieActor = (Label) root.lookup("#movieActor");
 		Label movieFilmrate = (Label) root.lookup("#movieFilmrate");
-		Label movieRunningtime = (Label)root.lookup("#movieRunningtime");
+		Label movieRunningtime = (Label) root.lookup("#movieRunningtime");
+
 		try {
 			SimpleDateFormat trimDate = new SimpleDateFormat("yy-MM-dd");
 			Date d;
@@ -69,9 +70,11 @@ public class detail02 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
+
 	public static void main(String[] args) {
-		
+		// launch(args);
 	}
 
 }

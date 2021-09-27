@@ -1,7 +1,7 @@
 package mainMovie;
 
 
-import detail.detail01;
+import detail.detail02;
 import javafx.scene.Parent;
 
 import javafx.scene.control.Button;

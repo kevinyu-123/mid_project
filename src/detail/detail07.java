@@ -8,6 +8,7 @@ import java.util.Date;
 
 import db.DBService;
 
+
 import detail.Controller.DetailController07;
 import dto.MovieDTO;
 
@@ -19,6 +20,7 @@ import javafx.stage.Stage;
 
 public class detail07 {
 	DBService db = new DBService();
+	MovieDTO dto = db.selectSQL("");
 	
 	public void start()  {
 		Stage primaryStage = new Stage();
@@ -36,7 +38,7 @@ public class detail07 {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-		MovieDTO dto = db.selectSQL("아임 유어 맨");
+		MovieDTO dto = db.selectSQL("극장판 짱구는 못말려: 격돌! 낙서왕국과 얼추 네 명의 용사들");
 		DetailController07 dc = loader.getController();
 		dc.setRoot(root);
 		Label movieTitle = (Label) root.lookup("#movieTitle");

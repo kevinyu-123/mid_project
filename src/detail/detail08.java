@@ -2,6 +2,7 @@ package detail;
 
 
 import java.io.IOException;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,7 +21,6 @@ import javafx.stage.Stage;
 public class detail08 {
 	DBService db = new DBService();
 	
-	
 	public void start()  {
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/detail/fxmlPages/detail08.fxml"));
@@ -37,7 +37,7 @@ public class detail08 {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-		MovieDTO dto = db.selectSQL("메기");
+		MovieDTO dto = db.selectSQL("아임 유어 맨");
 		DetailController08 dc = loader.getController();
 		dc.setRoot(root);
 		Label movieTitle = (Label) root.lookup("#movieTitle");

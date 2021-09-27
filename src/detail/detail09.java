@@ -2,11 +2,13 @@ package detail;
 
 
 import java.io.IOException;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import db.DBService;
+
 import detail.Controller.DetailController09;
 import dto.MovieDTO;
 
@@ -36,7 +38,7 @@ public class detail09 {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-		MovieDTO dto = db.selectSQL("코다");
+		MovieDTO dto = db.selectSQL("메기");
 		DetailController09 dc = loader.getController();
 		dc.setRoot(root);
 		Label movieTitle = (Label) root.lookup("#movieTitle");

@@ -2,6 +2,7 @@ package detail;
 
 
 import java.io.IOException;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,9 +18,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class detail10{
+public class detail10 {
 	DBService db = new DBService();
-	//MovieDTO dto = db.selectSQL("모가디슈");
+	
 	
 	public void start()  {
 		Stage primaryStage = new Stage();
@@ -37,11 +38,9 @@ public class detail10{
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		///////////////////////////////////////////
-	
+		MovieDTO dto = db.selectSQL("코다");
 		DetailController10 dc = loader.getController();
 		dc.setRoot(root);
-		
-		MovieDTO dto = db.selectSQL("모가디슈");
 		Label movieTitle = (Label) root.lookup("#movieTitle");
 		Label movieDate = (Label) root.lookup("#movieDate");
 		Label movieInfomation = (Label) root.lookup("#movieInfomation");
@@ -71,7 +70,7 @@ public class detail10{
 		}
 	}
 	public static void main(String[] args) {
-
+		
 	}
 
 }
