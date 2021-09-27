@@ -2,8 +2,6 @@ package developers.yong;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-
-import common.ComService;
 import common.ComService;
 import dto.ResvDTO;
 import javafx.scene.Parent;
@@ -67,8 +65,16 @@ public class SeatResvServiceImpl implements SeatResvService{
 	public ResvDTO payChoice() {
 		//dto 객체 받아서 거기에다가 저장
 		dto = new ResvDTO();
+		String resvNum1 = String.format("%04d",(int)(Math.random()*10000));
+		String resvNum2 = String.format("%04d",(int)(Math.random()*10000));
+		String resvNum3 = String.format("%04d",(int)(Math.random()*10000));
+		String resvNum4 = String.format("%04d",(int)(Math.random()*10000));
+		String resvNo = (resvNum1+"-"+resvNum2+"-"+resvNum3+"-"+resvNum4);
+		dto.setResvNo(resvNo);
 		dto.setAmount(allAmount);
 		dto.setSeatNum(allSeatNum.toString());
+		dto.setAdtTicket(adtTicket);
+		dto.setCdrTicket(cdrTicket);
 		//성인 0표 청소년 0 표 db, dto 작성 
 		return dto;
 	}
@@ -115,7 +121,8 @@ public class SeatResvServiceImpl implements SeatResvService{
 	public void a1() {
 		ToggleButton btnA1 = (ToggleButton)root.lookup("#aa1");String alp = "a";String num = "1"; 
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA1,alp,num);}
-		else {ComService.Alart(allTicket+"좌석 이상 선택 불가"); seatlistDelete(btnA1,alp,num);}}
+		else {
+			ComService.Alart(allTicket+"좌석 이상 선택 불가"); seatlistDelete(btnA1,alp,num);}}
 	public void a2() {
 		ToggleButton btnA2 =(ToggleButton)root.lookup("#aa2");String alp = "a";String num = "2";
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA2,alp,num);}

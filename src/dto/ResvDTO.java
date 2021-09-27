@@ -1,10 +1,8 @@
 package dto;
 
-import java.util.ArrayList;
-
 public class ResvDTO {
-	private String title,id,resvNo,resvDate,theater,PaymentDay,payWith,seatNum,adtTicket,cdrTicket;
-	private int amount;
+	private String title,id,resvNo,resvDate,theater,PaymentDay,payWith,seatNum;
+	private int amount,adtTicket,cdrTicket;
 	public String getTitle() {
 		return title;
 	}
@@ -17,16 +15,16 @@ public class ResvDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getAdtTicket() {
+	public int getAdtTicket() {
 		return adtTicket;
 	}
-	public void setAdtTicket(String adtTicket) {
+	public void setAdtTicket(int adtTicket) {
 		this.adtTicket = adtTicket;
 	}
-	public String getCdrTicket() {
+	public int getCdrTicket() {
 		return cdrTicket;
 	}
-	public void setCdrTicket(String cdrTicket) {
+	public void setCdrTicket(int cdrTicket) {
 		this.cdrTicket = cdrTicket;
 	}
 	public String getResvNo() {

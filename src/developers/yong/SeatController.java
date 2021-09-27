@@ -2,7 +2,6 @@ package developers.yong;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import developers.yong.payment.PayResvService;
 import developers.yong.payment.PayResvServiceImpl;
 import dto.ResvDTO;
@@ -40,8 +39,14 @@ public class SeatController implements Initializable{
 	public void fxMvChoice(){}
 	//DTO와 같이 결제선택창으로 넘어가기
 	public void fxPayWith(){
-		prs.setRoot(root, srs.payChoice());
-		prs.payResvView();
+		dto = srs.payChoice();
+		if(dto.getSeatNum()!="[]") {
+			prs.setDTO(dto);
+			prs.payResvView(root);
+		}else {
+			System.out.println("저장 없음");
+		}
+		
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

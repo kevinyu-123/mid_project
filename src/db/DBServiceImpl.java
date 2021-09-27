@@ -3,55 +3,70 @@ package db;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import common.DBCommon;
+import dto.ResvDTO;
 
 public class DBServiceImpl implements DBService{
 	String sql;
 	int result;
 	PreparedStatement ps;
 	ResultSet rs;
-	/*public void insertMember() {
-		sql = "insert into research values(?,?,?,?,?,?)";
+	public void updateResv(ResvDTO dto) {
+		sql = "update reservations set "
+				+ "ResvNo = ?,"
+				+ "adtTicket = ?,"
+				+ "cdrTicket = ?,"
+				+ "seatNum = ?,"
+				+ "PaymentDay = ?,"
+				+ "payWith = ?,"
+				+ "amount = ?"
+				+ "where id = ?";
+		DBCommon.setDBConnection();
 		try {
-			ps = dbCommon.con.prepareStatement(sql);
-			ps.setString();
-			ps.setString();
-			ps.setString();
-			ps.setString();
-			ps.setString();
-			ps.setString();
+			ps = DBCommon.con.prepareStatement(sql);
+			ps.setString(1,dto.getResvNo());
+			ps.setInt(2,dto.getAdtTicket());
+			ps.setInt(3,dto.getCdrTicket());
+			ps.setString(4,dto.getSeatNum());
+			ps.setString(5,"to_char(systimestamp,'yyyy mm dd hh24:mm')");
+			ps.setString(6,dto.getPayWith());
+			ps.setInt(7,dto.getAmount());
+			ps.setString(8,dto.getId());
 			result = ps.executeUpdate();
 			if(result==1) {System.out.println("저장 성공");}
 			else {System.out.println("저장 실패");}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
-	
-/*
-	public int DBSave(dto dto) {
-		// 연결이 됐는지 확인
-		System.out.println("DB에 회원가입 합니다.");
-		// 회원가입 할 sql문구 삽입
-		String sql = "insert into five values(?,?,?,?,?,?)";
-		// try- catch로 ps에 sql을 넣기
-		int result = 0;
+		}
+	}
+	public ResvDTO toIdgetResv(String id) {
+		sql = "Select * from reservations where id = ?";
 		try {
 			ps = DBCommon.con.prepareStatement(sql);
-			// ps.set(내가 설정한 변수형태)로 아까 sql ? 에 넣을 값 설정
-			ps.setString(1	, dto.getId());
-			ps.setString(2	, dto.getPassword());
-			ps.setString(3, dto.getEmail());
-			ps.setString(4, dto.getName());
-			ps.setString(5, dto.getPwdQuestion());
-			ps.setString(6, dto.getPwdAnswer());
-			// SELECT를 제외한 나머지 명령어는 executeUpdate()로 실행
-			// executeUpdate로 돌려주는 값은 성공 시 1 , 실패 시 0, 또는 exception 발생
-			result = ps.executeUpdate();
+			ps.setString(1, id);
+			rs = ps.executeQuery();
+			ResvDTO dto = new ResvDTO();
+			if(rs.next()) {
+				dto.setTitle(rs.getString("title"));
+				dto.setId(rs.getString("id"));
+				dto.setResvNo(rs.getString("resvno"));
+				dto.setResvDate(rs.getString("resevdate"));
+				dto.setTheater(rs.getString("theater"));
+				dto.setAdtTicket(rs.getInt("AdtTicket"));
+				dto.setCdrTicket(rs.getInt("CdtTicket"));
+				dto.setSeatNum(rs.getString("SeatNum"));
+				dto.setPaymentDay(rs.getString("Paymentday"));
+				dto.setPayWith(rs.getString("paywith"));
+				dto.setAmount(rs.getInt("amount"));
+				System.out.println("배출 성공");
+				return dto;
+			}
+			else System.out.println("저장된 id 없음");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		return result;
-	} */
+		return null;
+	}
 }
