@@ -1,4 +1,4 @@
-package developers.yong;
+package developers.yong.seatResv;
 
 import java.net.URL;
 import java.util.ResourceBundle;

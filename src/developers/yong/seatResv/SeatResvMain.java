@@ -1,13 +1,11 @@
-package developers.yong;
+package developers.yong.seatResv;
 
 import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.Controller;
 
 public class SeatResvMain extends Application {
 

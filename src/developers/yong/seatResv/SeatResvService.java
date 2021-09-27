@@ -1,4 +1,4 @@
-package developers.yong;
+package developers.yong.seatResv;
 
 import dto.ResvDTO;
 import javafx.scene.Parent;
