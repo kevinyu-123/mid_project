@@ -19,7 +19,7 @@
 			layoutX="47.0" layoutY="50.0" pickOnBounds="true"
 			preserveRatio="true">
 			<image>
-				<Image url="@../../image/image3.jpeg" />
+				<Image url="@../../image/image2.jpeg" />
 			</image>
 		</ImageView>
 		<Label fx:id="movieTitle" layoutX="427.0" layoutY="41.0"
