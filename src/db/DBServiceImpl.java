@@ -25,8 +25,8 @@ public class DBServiceImpl implements DBService{
 		try {
 			ps = DBCommon.con.prepareStatement(sql);
 			ps.setString(1,dto.getResvNo());
-			ps.setInt(2,dto.getAdtTicket());
-			ps.setInt(3,dto.getCdrTicket());
+			ps.setInt(2,Integer.parseInt(dto.getAdtTicket()));
+			ps.setInt(3,Integer.parseInt(dto.getCdrTicket()));
 			ps.setString(4,dto.getSeatNum());
 			ps.setString(5,"to_char(systimestamp,'yyyy mm dd hh24:mm')");
 			ps.setString(6,dto.getPayWith());
@@ -53,8 +53,8 @@ public class DBServiceImpl implements DBService{
 				dto.setResvNo(rs.getString("resvno"));
 				dto.setResvDate(rs.getString("resevdate"));
 				dto.setTheater(rs.getString("theater"));
-				dto.setAdtTicket(rs.getInt("AdtTicket"));
-				dto.setCdrTicket(rs.getInt("CdtTicket"));
+				dto.setAdtTicket(""+rs.getInt("AdtTicket"));
+				dto.setCdrTicket(""+rs.getInt("CdtTicket"));
 				dto.setSeatNum(rs.getString("SeatNum"));
 				dto.setPaymentDay(rs.getString("Paymentday"));
 				dto.setPayWith(rs.getString("paywith"));

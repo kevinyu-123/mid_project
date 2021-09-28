@@ -93,6 +93,7 @@ public class DBServiceImpl implements DBService {
 			ps.setString(2, dto.getInfomation());
 			ps.setString(3, dto.getNation());
 			ps.setInt(4, dto.getRunningTime());
+			System.out.println(dto.getMovieDate());
 			Date date = java.sql.Date.valueOf(dto.getMovieDate());
 			ps.setDate(5, date);
 			ps.setString(6, dto.getDirector());
@@ -109,11 +110,12 @@ public class DBServiceImpl implements DBService {
 
 	@Override
 	public MovieDTO getMovieInfo(String movieName) {
-		String sql = "SELECT * FROM movieinfo WHERE title=?";
+		String sql = "SELECT * FROM movieinfo WHERE title Like ?";
 		MovieDTO dto = null;
+		String keyword = "%"+movieName+"%";
 		try {
 			ps = DBCommon.con.prepareStatement(sql);
-			ps.setString(1, movieName);
+			ps.setString(1, keyword);
 			rs = ps.executeQuery();
 			if (rs.next()) {
 				dto = new MovieDTO();
@@ -165,6 +167,8 @@ public class DBServiceImpl implements DBService {
 				dto.setResvNo(rs.getString("resvno"));
 				//dto.setSeatNum(rs.getString("seatnum"));
 				dto.setTitle(rs.getString("title"));
+				dto.setAdtTicket(rs.getString("adtticket"));
+				dto.setCdrTicket(rs.getString("cdtticket"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -183,6 +187,86 @@ public class DBServiceImpl implements DBService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return result;
+	}
+
+	@Override
+	public int updateResvInfo(ResvDTO dto, String uId) {
+		String sql = "UPDATE reservations SET adtticket = ?,cdtticket= ?,"
+				+ "paywith =?,amount = ?,seatnum = ?, resevdate = ? WHERE id = ?";
+		int result = 0;
+		try {
+			ps = DBCommon.con.prepareStatement(sql);
+			ps.setInt(1, Integer.parseInt(dto.getAdtTicket()));
+			ps.setInt(2, Integer.parseInt(dto.getCdrTicket()));
+			ps.setString(3, dto.getPayWith());
+			ps.setInt(4, dto.getAmount());
+			ps.setString(5,dto.getSeatNum());
+			System.out.println(dto.getResvDate());
+			String a = dto.getResvDate().substring(0, 10);
+			Date date = java.sql.Date.valueOf(a);
+			System.out.println(date);
+			ps.setDate(6,date);
+			ps.setString(7, uId);
+			
+			result = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public ArrayList<MovieDTO> getAllMovieInfo() {
+		String sql = "SELECT * FROM movieinfo";
+		ArrayList<MovieDTO> list = new ArrayList<MovieDTO>();
+		try {
+			ps = DBCommon.con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				MovieDTO dto = new MovieDTO();
+				dto.setTitle(rs.getString("title"));
+				dto.setInfomation(rs.getString("infomation"));
+				dto.setActor(rs.getString("actor"));
+				dto.setDirector(rs.getString("director"));
+				dto.setFilmRate(rs.getString("filmrate"));
+				dto.setRunningTime(rs.getInt("runningTime"));
+				dto.setMovieDate(rs.getString("MovieDate"));
+				dto.setNation(rs.getString("nation"));
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	@Override
+	public int updateMovieInfo(MovieDTO dto, String title) {
+		String sql = "UPDATE movieinfo SET title = ?,  infomation = ?, actor = ?,"
+				+ "director = ?, filmrate = ?, runningtime = ?, nation = ?, moviedate =? WHERE title = ?";
+		int result = 0;
+		try {
+			ps = DBCommon.con.prepareStatement(sql);
+			ps.setString(1, dto.getTitle());
+			ps.setString(2, dto.getInfomation());
+			ps.setString(3, dto.getActor());
+			ps.setString(4, dto.getDirector());
+			ps.setString(5, dto.getFilmRate());
+			ps.setInt(6, dto.getRunningTime());
+			ps.setString(7, dto.getNation());
+			System.out.println(dto.getMovieDate());
+			System.out.println(dto.getMovieDate().length());
+			String a = dto.getMovieDate().substring(0, 10);
+			Date date = java.sql.Date.valueOf(a);
+			System.out.println(date);
+			ps.setDate(8, date);
+			ps.setString(9, title);
+			
+			result = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 		return result;
 	}
 }

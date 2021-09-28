@@ -1,6 +1,9 @@
 package developers.hj.service;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 
 //import com.sun.marlin.DDasher;
 
@@ -28,6 +31,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -47,9 +52,12 @@ public class AdminServiceImpl implements AdminService {
 	ObservableList<String> showString;
 	ListView listView;
 	ListView showList;
+	ImageView ImageView;
+	ArrayList<String> movieImg;
 	ArrayList<MemberDTO> allMem;
+	ArrayList<MovieDTO> allMovie;
 	String s;
-
+	
 	public AdminServiceImpl() {
 		ds = new DBServiceImpl();
 	}
@@ -152,10 +160,10 @@ public class AdminServiceImpl implements AdminService {
 
 			listView = (ListView) viewroot.lookup("#listView");
 			showList = (ListView) viewroot.lookup("#showList");
-			Button button = (Button)viewroot.lookup("#close");
+			Button button = (Button) viewroot.lookup("#close");
 			setListView();
 			setListViewEvent();
-			button.setOnMouseClicked(e ->{
+			button.setOnMouseClicked(e -> {
 				s.close();
 			});
 		} catch (Exception e) {
@@ -216,14 +224,14 @@ public class AdminServiceImpl implements AdminService {
 				TextField name = (TextField) viewroot.lookup("#showName");
 				TextField pwdQ = (TextField) viewroot.lookup("#showQ");
 				TextField pwdA = (TextField) viewroot.lookup("#showA");
-				Button button = (Button)viewroot.lookup("#close");
+				Button button = (Button) viewroot.lookup("#close");
 
 				id.setText(dto.getId());
 				name.setText(dto.getName());
 				email.setText(dto.getEmail());
 				pwdA.setText(dto.getPwdAnswer());
 				pwdQ.setText(dto.getPwdQuestion());
-				button.setOnMouseClicked(e ->{
+				button.setOnMouseClicked(e -> {
 					s.close();
 				});
 
@@ -274,63 +282,123 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public void searchMovie() {
-		String name = findMovie();
-		MovieDTO dto = ds.getMovieInfo(name);
-		if (dto.getTitle().equals(name)) {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/hj/fxml/ShowMovieInfo.fxml"));
-			Parent viewroot = null;
-			try {
-				viewroot = loader.load();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			
-			Scene scene = new Scene(viewroot);
-			
-			MovieController m = loader.getController();
-			m.setRoot(viewroot);
-			
-			Stage s = (Stage) root.getScene().getWindow();
-			s.setScene(scene);
-			s.show();
-			
-			TextField movname = (TextField) viewroot.lookup("#movieName");
-			TextField info = (TextField) viewroot.lookup("#info");
-			TextField rate = (TextField) viewroot.lookup("#rate");
-			TextField dir = (TextField) viewroot.lookup("#dir");
-			TextField actor = (TextField) viewroot.lookup("#actor");
-			TextField time = (TextField) viewroot.lookup("#time");
-			TextField date = (TextField) viewroot.lookup("#date");
-			TextField nation = (TextField) viewroot.lookup("#nation");
-			Button button = (Button) viewroot.lookup("#dd");
+		try {
+			String name = findMovie();
+			MovieDTO dto = ds.getMovieInfo(name);
+			if (dto.getTitle().contains(name)) {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/hj/fxml/ShowMovieInfo.fxml"));
+				Parent viewroot = null;
+				try {
+					viewroot = loader.load();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 
-			movname.setText(dto.getTitle());
-			info.setText(dto.getInfomation());
-			rate.setText(dto.getFilmRate());
-			dir.setText(dto.getDirector());
-			actor.setText(dto.getActor());
-			time.setText(dto.getRunningTime() + "분");
-			date.setText(dto.getMovieDate());
-			nation.setText(dto.getNation());
-			
-			button.setOnMouseClicked(e -> {
-				s.close();
+				Scene scene = new Scene(viewroot);
+
+				MovieController m = loader.getController();
+				m.setRoot(viewroot);
+
+				Stage s = (Stage) root.getScene().getWindow();
+				s.setScene(scene);
+				s.show();
 				
-			});
-			
-		} else if(!dto.getTitle().equals(name)) {
-			Alert alert = new Alert(AlertType.ERROR);
-			alert.setContentText("존재하지 않는 영화입니다.");
-			alert.show();
+				TextField movname = (TextField) viewroot.lookup("#movieName");
+				TextField info = (TextField) viewroot.lookup("#info");
+				TextField rate = (TextField) viewroot.lookup("#rate");
+				TextField dir = (TextField) viewroot.lookup("#dir");
+				TextField actor = (TextField) viewroot.lookup("#actor");
+				TextField time = (TextField) viewroot.lookup("#time");
+				DatePicker date = (DatePicker) viewroot.lookup("#date");
+				TextField nation = (TextField) viewroot.lookup("#nation");
+				Button button = (Button) viewroot.lookup("#dd");
+				Button upd = (Button)viewroot.lookup("#update");
+
+				movname.setText(dto.getTitle());
+				info.setText(dto.getInfomation());
+				rate.setText(dto.getFilmRate());
+				dir.setText(dto.getDirector());
+				actor.setText(dto.getActor());
+				time.setText(Integer.toString(dto.getRunningTime()));
+				SimpleDateFormat trimDate = new SimpleDateFormat("yyyy-MM-dd");
+				Date d = trimDate.parse(dto.getMovieDate());
+				String newDate = trimDate.format(d);
+				date.setValue(LocalDate.parse(newDate));
+				nation.setText(dto.getNation());
+
+				button.setOnMouseClicked(e -> {
+					s.close();
+				});
+				movname.setOnMouseExited(e->{
+					dto.setTitle(movname.getText());
+					System.out.println(dto.getTitle());
+
+				});
+				info.setOnMouseExited(e->{
+					dto.setInfomation(info.getText());
+					System.out.println(dto.getInfomation());
+
+				});
+
+				rate.setOnMouseExited(e->{
+					dto.setFilmRate(rate.getText());
+					System.out.println(dto.getFilmRate());
+
+				});
+				dir.setOnMouseExited(e->{
+					dto.setDirector(dir.getText());
+					System.out.println(dto.getDirector());
+
+				});
+				actor.setOnMouseExited(e->{
+					dto.setActor(actor.getText());
+					System.out.println(dto.getActor());
+
+				});
+				nation.setOnMouseExited(e->{
+					dto.setNation(nation.getText());
+					System.out.println(dto.getNation());
+
+				});
+				time.setOnMouseExited(e->{
+					dto.setRunningTime(Integer.parseInt(time.getText()));
+				});
+				date.setOnMouseExited(e->{
+					dto.setMovieDate(date.getValue().toString());
+					System.out.println(dto.getMovieDate());
+				});
+				
+				upd.setOnMouseClicked(e ->{
+					int result = ds.updateMovieInfo(dto, movname.getText());
+					if(result == 1) {
+						Alert alert = new Alert(AlertType.INFORMATION);
+						alert.setContentText("변경 완료");
+						alert.show();
+						s.close();
+					}else {
+						Alert alert = new Alert(AlertType.ERROR);
+						alert.setContentText("변경 실패");
+						alert.show();	
+						s.close();
+						}
+					});
+
+		
+			} else if (!dto.getTitle().equals(name)) {
+				Alert alert = new Alert(AlertType.ERROR);
+				alert.setContentText("존재하지 않는 영화입니다.");
+				alert.show();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
-	
+
 	private String findMovie() {
 		TextField name = (TextField) root.lookup("#movieName");
 		return name.getText();
 	}
-	
-	
+
 	@Override
 	public void confirmDelete() {
 		try {
@@ -341,7 +409,6 @@ public class AdminServiceImpl implements AdminService {
 				alert.setContentText("삭제 완료");
 				alert.show();
 				System.out.println(result);
-				System.out.println();
 			} else {
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setContentText("삭제 실패");
@@ -353,111 +420,180 @@ public class AdminServiceImpl implements AdminService {
 			e.printStackTrace();
 		}
 	}
+
 	@Override
 	public void findId() {
 		FindResvInfo fr = new FindResvInfo();
 		fr.showInfo();
 	}
-	
+
 	private String fId() {
-		TextField id = (TextField)root.lookup("#id");
+		TextField id = (TextField) root.lookup("#id");
 		return id.getText();
 	}
+
 	private String fNo() {
-		TextField no = (TextField)root.lookup("#no");
+		TextField no = (TextField) root.lookup("#no");
 		return no.getText();
 	}
+
 	@Override
 	public void cancelResv() {
 		String id = fId();
 		String Rno = fNo();
 		ResvDTO dto = ds.getResvINFO(id);
-		if(dto !=null && dto.getId().equals(id) && dto.getResvNo().equals(Rno)) {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/hj/fxml/DelResv.fxml"));
-			Parent viewroot = null;
-			try {
-				viewroot = loader.load();
-			} catch (Exception e) {
-				e.printStackTrace();
+		try {
+			if (dto != null && dto.getId().equals(id) && dto.getResvNo().equals(Rno)) {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/hj/fxml/DltResv.fxml"));
+				Parent viewroot = null;
+				try {
+					viewroot = loader.load();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				ResvController r = loader.getController();
+				r.setRoot(viewroot);
+
+				Scene scene = new Scene(viewroot);
+				Stage s = (Stage) root.getScene().getWindow();
+				s.setScene(scene);
+				s.show();
+
+				TextField uId = (TextField) viewroot.lookup("#id");
+				TextField amount = (TextField) viewroot.lookup("#amount");
+				TextField pmethod = (TextField) viewroot.lookup("#pmethod");
+				TextField pday = (TextField) viewroot.lookup("#pday");
+				TextField seat = (TextField) viewroot.lookup("#seat");
+				TextField theater = (TextField) viewroot.lookup("#theater");
+				TextField date = (TextField) viewroot.lookup("#date");
+				TextField no = (TextField) viewroot.lookup("#no");
+				TextField title = (TextField) viewroot.lookup("#title");
+				TextField adt = (TextField) viewroot.lookup("#adt");
+				TextField cdr = (TextField) viewroot.lookup("#cdr");
+				Button button = (Button) viewroot.lookup("#close");
+
+				uId.setText(dto.getId());
+				amount.setText(dto.getAmount() + "원");
+				pmethod.setText(dto.getPayWith());
+				pday.setText(dto.getPaymentDay());
+				seat.setText(dto.getSeatNum());
+				theater.setText(dto.getTheater());
+				SimpleDateFormat trimDate = new SimpleDateFormat("yyyy-MM-dd");
+				Date d = trimDate.parse(dto.getResvDate());
+				String newDate = trimDate.format(d);
+				date.setText(newDate);
+				no.setText(dto.getResvNo());
+				title.setText(dto.getTitle());
+				adt.setText(dto.getAdtTicket());
+				cdr.setText(dto.getCdrTicket());
+
+				button.setOnMouseClicked(e -> {
+					s.close();
+
+				});
+
 			}
-			ResvController r = loader.getController();
-			r.setRoot(viewroot);
-			
-			Scene scene = new Scene(viewroot);
-			Stage s = (Stage) root.getScene().getWindow();
-			s.setScene(scene);
-			s.show();
-			
-			TextField uId = (TextField) viewroot.lookup("#id");
-			TextField amount =(TextField) viewroot.lookup("#amount");
-			TextField pmethod = (TextField) viewroot.lookup("#pmethod");
-			TextField pday = (TextField) viewroot.lookup("#pday");
-			TextField seat = (TextField) viewroot.lookup("#seat");
-			TextField theater = (TextField) viewroot.lookup("#theater");
-			TextField date = (TextField) viewroot.lookup("#date");
-			TextField no = (TextField) viewroot.lookup("#no");
-			TextField title = (TextField) viewroot.lookup("#title");
-			Button button = (Button) viewroot.lookup("#close");
-			
-			uId.setText(dto.getId());
-			amount.setText(dto.getAmount()+"원");
-			pmethod.setText(dto.getPayWith());
-			pday.setText(dto.getPaymentDay());
-			seat.setText(dto.getSeatNum().toString());
-			theater.setText(dto.getTheater());
-			date.setText(dto.getResvDate());
-			no.setText(dto.getResvNo());
-			title.setText(dto.getTitle());
-			
-			button.setOnMouseClicked(e ->{
-				s.close();
-			});
-		}	
-		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 	@Override
 	public void showResvInfo() {
 		String id = fId();
 		ResvDTO dto = ds.getResvINFO(id);
-		if(dto !=null && dto.getId().equals(id)) {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/hj/fxml/showResv.fxml"));
-			Parent viewroot = null;
-			try {
-				viewroot = loader.load();
-			} catch (Exception e) {
-				e.printStackTrace();
+		try {
+			if (dto != null && dto.getId().equals(id)) {
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/hj/fxml/showResv.fxml"));
+				Parent viewroot = null;
+				try {
+					viewroot = loader.load();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+				Scene scene = new Scene(viewroot);
+				Stage s = (Stage) root.getScene().getWindow();
+				s.setScene(scene);
+				s.show();
+
+				TextField uId = (TextField) viewroot.lookup("#id");
+				TextField amount = (TextField) viewroot.lookup("#amount");
+				TextField pmethod = (TextField) viewroot.lookup("#pmethod");
+				TextField pday = (TextField) viewroot.lookup("#pday");
+				TextField seat = (TextField) viewroot.lookup("#seat");
+				TextField theater = (TextField) viewroot.lookup("#theater");
+				DatePicker date = (DatePicker) viewroot.lookup("#date");
+				TextField no = (TextField) viewroot.lookup("#no");
+				TextField title = (TextField) viewroot.lookup("#title");
+				TextField adt = (TextField) viewroot.lookup("#adt");
+				TextField cdr = (TextField) viewroot.lookup("#cdr");
+				Button button = (Button) viewroot.lookup("#close");
+				Button updButton = (Button) viewroot.lookup("#update");
+				
+				uId.setText(dto.getId());
+				amount.setText(Integer.toString(dto.getAmount()));
+				pmethod.setText(dto.getPayWith());
+				pday.setText(dto.getPaymentDay());
+				seat.setText(dto.getSeatNum());
+				theater.setText(dto.getTheater());
+				SimpleDateFormat trimDate = new SimpleDateFormat("yyyy-MM-dd");
+				Date d = trimDate.parse(dto.getResvDate());
+				String newDate = trimDate.format(d);
+				date.setValue(LocalDate.parse(newDate));
+				no.setText(dto.getResvNo());
+				title.setText(dto.getTitle());
+				adt.setText(dto.getAdtTicket());
+				cdr.setText(dto.getCdrTicket());
+
+				button.setOnMouseClicked(e -> {
+					s.close();
+				});
+				
+				amount.setOnMouseExited(e -> {
+					dto.setAmount(Integer.parseInt(amount.getText()));
+				});
+				date.setOnMouseExited(e -> {
+					dto.setResvDate(date.getValue().toString());
+				});
+				adt.setOnMouseExited(e -> {
+					dto.setAdtTicket(adt.getText());
+				});
+				cdr.setOnMouseExited(e -> {
+					dto.setCdrTicket(cdr.getText());
+				});
+				seat.setOnMouseExited(e -> {
+					dto.setSeatNum(seat.getText());
+					System.out.println("seat :" + dto.getSeatNum());
+				});
+				pmethod.setOnMouseExited(e -> {
+					dto.setPayWith(pmethod.getText());
+					System.out.println("pay: " + dto.getPayWith());
+				});
+				try {
+				updButton.setOnMouseClicked(e -> {
+					int result = ds.updateResvInfo(dto, id);
+					if (result == 1) {
+						Alert alert = new Alert(AlertType.INFORMATION);
+						alert.setContentText("변경이 완료되었습니다.");
+						alert.show();
+		
+						s.close();
+					} else {
+						Alert alert = new Alert(AlertType.ERROR);
+						alert.setContentText("변경 중 오류가 발생하였습니다.");
+						alert.show();
+						s.close();
+					}
+				});
 			}
-			Scene scene = new Scene(viewroot);
-			Stage s = (Stage) root.getScene().getWindow();
-			s.setScene(scene);
-			s.show();
-			
-			TextField uId = (TextField) viewroot.lookup("#id");
-			TextField amount =(TextField) viewroot.lookup("#amount");
-			TextField pmethod = (TextField) viewroot.lookup("#pmethod");
-			TextField pday = (TextField) viewroot.lookup("#pday");
-			TextField seat = (TextField) viewroot.lookup("#seat");
-			TextField theater = (TextField) viewroot.lookup("#theater");
-			TextField date = (TextField) viewroot.lookup("#date");
-			TextField no = (TextField) viewroot.lookup("#no");
-			TextField title = (TextField) viewroot.lookup("#title");
-			Button button = (Button) viewroot.lookup("#close");
-			
-			uId.setText(dto.getId());
-			amount.setText(dto.getAmount()+"원");
-			pmethod.setText(dto.getPayWith());
-			pday.setText(dto.getPaymentDay());
-			seat.setText(dto.getSeatNum().toString());
-			theater.setText(dto.getTheater());
-			date.setText(dto.getResvDate());
-			no.setText(dto.getResvNo());
-			title.setText(dto.getTitle());
-			
-			button.setOnMouseClicked(e ->{
-				s.close();
-			});
-		}	
+			catch(Exception e) {
+				e.printStackTrace();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -468,17 +604,79 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public void confirmCancel() {
-		TextField id = (TextField)root.lookup("#id");
+		TextField id = (TextField) root.lookup("#id");
 		int result = ds.deleteResv(id.getText());
-		if(result == 1) {
-			Alert alert = new Alert(AlertType.CONFIRMATION);
-			alert.setContentText("예매 취소 완료");
+		if (result == 1) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setContentText("예매가 취소되었습니다.");
 			alert.show();
 		}
-		
 	}
 
-
-
+	@Override
+	public void updMoive() {
+		Stage adminStage = new Stage();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/hj/fxml/showUpd.fxml"));
+		Parent root = null;
+		try {
+			root = loader.load();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
+		Scene scene = new Scene(root);
+		MovieController ctl = loader.getController();
+		ctl.setRoot(root);
+		
+		adminStage.setTitle("상영 영화 정보");
+		adminStage.setScene(scene);
+		adminStage.show();
+		listView = (ListView) root.lookup("#name");
+		showList = (ListView) root.lookup("#info");
+		ImageView = (ImageView) root.lookup("#img");
+		
+		setMoiveList();
+		movieListView();
+		Button close = (Button)root.lookup("#close");
+		
+		close.setOnMouseClicked(e->{
+			adminStage.close();
+		});
+		
+	}
+	private void setMoiveList() {
+		try {
+			listString = FXCollections.observableArrayList();
+			movieImg = new ArrayList<String>();
+			allMovie = ds.getAllMovieInfo();
+			for (int i = 0; i < allMovie.size(); i++) {
+				listString.add(i,allMovie.get(i).getTitle());
+				movieImg.add("image"+i+".jpeg");
+			}
+			listView.setItems(listString);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void movieListView() {
+		listView.getSelectionModel().selectedIndexProperty().addListener((obs, oldValue, newValue) -> {
+			System.out.println("old: " + oldValue);
+			System.out.println("new: " + newValue);
+			System.out.println("선택 값: " + listString.get((int) newValue));
+			showString = FXCollections.observableArrayList();
+			allMovie = ds.getAllMovieInfo();
+			showString.add("제목: " + allMovie.get((int) newValue).getTitle());
+			showString.add("정보: " + allMovie.get((int) newValue).getInfomation());
+			showString.add("국가: " + allMovie.get((int) newValue).getNation());
+			showString.add("감독: " + allMovie.get((int) newValue).getDirector());
+			showString.add("출연: " + allMovie.get((int) newValue).getActor());
+			showString.add("등급: " + allMovie.get((int) newValue).getFilmRate());
+			showString.add("개봉일: " + allMovie.get((int) newValue).getMovieDate());
+			showString.add("상영시간: " + allMovie.get((int) newValue).getRunningTime()+"분");
+			showList.setItems(showString);
+			ImageView.setImage(new Image(getClass().getResource("/image/"+movieImg.get((int)newValue)).toString() ));
+		
+		});
+	}
 
 }

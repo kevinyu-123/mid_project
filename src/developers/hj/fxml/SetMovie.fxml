@@ -31,7 +31,6 @@
       <TextField fx:id="movieRate" layoutX="197.0" layoutY="565.0" />
       <Button layoutX="312.0" layoutY="611.0" mnemonicParsing="false" onAction="#movieSave" prefHeight="45.0" prefWidth="114.0" text="저장" />
       <DatePicker fx:id="movieRd" layoutX="197.0" layoutY="361.0" />
-      <Button mnemonicParsing="false" text="Button" />
       <Button fx:id="close" layoutX="70.0" layoutY="611.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="114.0" text="닫기" />
    </children>
 </AnchorPane>

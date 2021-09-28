@@ -73,8 +73,8 @@ public class SeatResvServiceImpl implements SeatResvService{
 		dto.setResvNo(resvNo);
 		dto.setAmount(allAmount);
 		dto.setSeatNum(allSeatNum.toString());
-		dto.setAdtTicket(adtTicket);
-		dto.setCdrTicket(cdrTicket);
+		dto.setAdtTicket(adtTicket+"");
+		dto.setCdrTicket(cdrTicket+"");
 		//성인 0표 청소년 0 표 db, dto 작성 
 		return dto;
 	}

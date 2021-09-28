@@ -1,8 +1,9 @@
 package dto;
 
 public class ResvDTO {
-	private String title,id,resvNo,resvDate,theater,PaymentDay,payWith,seatNum;
-	private int amount,adtTicket,cdrTicket;
+	private String title,id,resvNo,resvDate,theater,PaymentDay,payWith,seatNum,adtTicket,cdrTicket;
+	private int amount;
+
 	public String getTitle() {
 		return title;
 	}
@@ -14,18 +15,6 @@ public class ResvDTO {
 	}
 	public void setId(String id) {
 		this.id = id;
-	}
-	public int getAdtTicket() {
-		return adtTicket;
-	}
-	public void setAdtTicket(int adtTicket) {
-		this.adtTicket = adtTicket;
-	}
-	public int getCdrTicket() {
-		return cdrTicket;
-	}
-	public void setCdrTicket(int cdrTicket) {
-		this.cdrTicket = cdrTicket;
 	}
 	public String getResvNo() {
 		return resvNo;
@@ -68,5 +57,17 @@ public class ResvDTO {
 	}
 	public void setAmount(int amount) {
 		this.amount = amount;
+	}
+	public String getAdtTicket() {
+		return adtTicket;
+	}
+	public void setAdtTicket(String adtTicket) {
+		this.adtTicket = adtTicket;
+	}
+	public String getCdrTicket() {
+		return cdrTicket;
+	}
+	public void setCdrTicket(String cdrTicket) {
+		this.cdrTicket = cdrTicket;
 	}
 }
