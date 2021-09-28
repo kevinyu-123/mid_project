@@ -57,7 +57,7 @@ public class AdminServiceImpl implements AdminService {
 	ArrayList<MemberDTO> allMem;
 	ArrayList<MovieDTO> allMovie;
 	String s;
-
+	
 	public AdminServiceImpl() {
 		ds = new DBServiceImpl();
 	}
@@ -309,27 +309,81 @@ public class AdminServiceImpl implements AdminService {
 				TextField dir = (TextField) viewroot.lookup("#dir");
 				TextField actor = (TextField) viewroot.lookup("#actor");
 				TextField time = (TextField) viewroot.lookup("#time");
-				TextField date = (TextField) viewroot.lookup("#date");
+				DatePicker date = (DatePicker) viewroot.lookup("#date");
 				TextField nation = (TextField) viewroot.lookup("#nation");
 				Button button = (Button) viewroot.lookup("#dd");
+				Button upd = (Button)viewroot.lookup("#update");
 
 				movname.setText(dto.getTitle());
 				info.setText(dto.getInfomation());
 				rate.setText(dto.getFilmRate());
 				dir.setText(dto.getDirector());
 				actor.setText(dto.getActor());
-				time.setText(dto.getRunningTime() + "분");
+				time.setText(Integer.toString(dto.getRunningTime()));
 				SimpleDateFormat trimDate = new SimpleDateFormat("yyyy-MM-dd");
 				Date d = trimDate.parse(dto.getMovieDate());
 				String newDate = trimDate.format(d);
-				date.setText(newDate);
+				date.setValue(LocalDate.parse(newDate));
 				nation.setText(dto.getNation());
 
 				button.setOnMouseClicked(e -> {
 					s.close();
+				});
+				movname.setOnMouseExited(e->{
+					dto.setTitle(movname.getText());
+					System.out.println(dto.getTitle());
+
+				});
+				info.setOnMouseExited(e->{
+					dto.setInfomation(info.getText());
+					System.out.println(dto.getInfomation());
 
 				});
 
+				rate.setOnMouseExited(e->{
+					dto.setFilmRate(rate.getText());
+					System.out.println(dto.getFilmRate());
+
+				});
+				dir.setOnMouseExited(e->{
+					dto.setDirector(dir.getText());
+					System.out.println(dto.getDirector());
+
+				});
+				actor.setOnMouseExited(e->{
+					dto.setActor(actor.getText());
+					System.out.println(dto.getActor());
+
+				});
+				nation.setOnMouseExited(e->{
+					dto.setNation(nation.getText());
+					System.out.println(dto.getNation());
+
+				});
+				time.setOnMouseExited(e->{
+					dto.setRunningTime(Integer.parseInt(time.getText()));
+				});
+				date.setOnMouseExited(e->{
+					dto.setMovieDate(date.getValue().toString());
+					System.out.println(dto.getMovieDate());
+				});
+				
+				upd.setOnMouseClicked(e ->{
+					int result = ds.updateMovieInfo(dto, movname.getText());
+					if(result == 1) {
+						Alert alert = new Alert(AlertType.INFORMATION);
+						alert.setContentText("변경 완료");
+						alert.show();
+						s.close();
+					}else {
+						Alert alert = new Alert(AlertType.ERROR);
+						alert.setContentText("변경 실패");
+						alert.show();	
+						s.close();
+						}
+					});
+
+		
 			} else if (!dto.getTitle().equals(name)) {
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setContentText("존재하지 않는 영화입니다.");
@@ -355,7 +409,6 @@ public class AdminServiceImpl implements AdminService {
 				alert.setContentText("삭제 완료");
 				alert.show();
 				System.out.println(result);
-				System.out.println();
 			} else {
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setContentText("삭제 실패");
@@ -517,7 +570,7 @@ public class AdminServiceImpl implements AdminService {
 					dto.setPayWith(pmethod.getText());
 					System.out.println("pay: " + dto.getPayWith());
 				});
-
+				try {
 				updButton.setOnMouseClicked(e -> {
 					int result = ds.updateResvInfo(dto, id);
 					if (result == 1) {
@@ -533,6 +586,10 @@ public class AdminServiceImpl implements AdminService {
 						s.close();
 					}
 				});
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -596,7 +653,6 @@ public class AdminServiceImpl implements AdminService {
 				movieImg.add("image"+i+".jpeg");
 			}
 			listView.setItems(listString);
-			ImageView.setImage(new Image("/image/image1.jpeg"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -623,9 +679,4 @@ public class AdminServiceImpl implements AdminService {
 		});
 	}
 
-	@Override
-	public void MoviedetailUpd() {
-		
-		
-	}
 }

@@ -34,7 +34,5 @@ public class MovieController implements Initializable {
 	public void delete() {
 		as.confirmDelete();
 	}
-	public void update() {
-		as.MoviedetailUpd();
-	}
+
 }

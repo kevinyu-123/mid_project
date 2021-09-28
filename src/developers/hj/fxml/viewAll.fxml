@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="674.0" prefWidth="785.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.hj.Controller.ViewController">
+<AnchorPane prefHeight="615.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.hj.Controller.ViewController">
    <children>
-      <ListView fx:id="listView" layoutX="42.0" layoutY="126.0" prefHeight="489.0" prefWidth="246.0" />
+      <ListView fx:id="listView" layoutX="27.0" layoutY="126.0" prefHeight="433.0" prefWidth="246.0" />
       <Label alignment="CENTER" layoutX="76.0" layoutY="70.0" prefHeight="50.0" prefWidth="179.0" text="회원 리스트 " textOverrun="CENTER_ELLIPSIS" underline="true">
          <font>
             <Font size="29.0" />
@@ -18,12 +18,12 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="497.0" layoutY="70.0" prefHeight="50.0" prefWidth="179.0" text="회원 정보">
+      <Label layoutX="320.0" layoutY="70.0" prefHeight="50.0" prefWidth="179.0" text="회원 정보">
          <font>
             <Font size="41.0" />
          </font>
       </Label>
-      <ListView fx:id="showList" layoutX="464.0" layoutY="126.0" prefHeight="214.0" prefWidth="246.0" />
-      <Button fx:id="close" layoutX="339.0" layoutY="590.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="108.0" text="닫기" />
+      <ListView fx:id="showList" layoutX="286.0" layoutY="126.0" prefHeight="214.0" prefWidth="246.0" />
+      <Button fx:id="close" layoutX="387.0" layoutY="527.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="108.0" text="닫기" />
    </children>
 </AnchorPane>

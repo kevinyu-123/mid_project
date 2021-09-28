@@ -93,6 +93,7 @@ public class DBServiceImpl implements DBService {
 			ps.setString(2, dto.getInfomation());
 			ps.setString(3, dto.getNation());
 			ps.setInt(4, dto.getRunningTime());
+			System.out.println(dto.getMovieDate());
 			Date date = java.sql.Date.valueOf(dto.getMovieDate());
 			ps.setDate(5, date);
 			ps.setString(6, dto.getDirector());
@@ -192,7 +193,7 @@ public class DBServiceImpl implements DBService {
 	@Override
 	public int updateResvInfo(ResvDTO dto, String uId) {
 		String sql = "UPDATE reservations SET adtticket = ?,cdtticket= ?,"
-				+ "paywith =?,amount = ?,seatnum = ?, resevdate = ? WHERE id = ? ";
+				+ "paywith =?,amount = ?,seatnum = ?, resevdate = ? WHERE id = ?";
 		int result = 0;
 		try {
 			ps = dbCommon.con.prepareStatement(sql);
@@ -201,7 +202,11 @@ public class DBServiceImpl implements DBService {
 			ps.setString(3, dto.getPayWith());
 			ps.setInt(4, dto.getAmount());
 			ps.setString(5,dto.getSeatNum());
-			ps.setString(6,dto.getResvDate());
+			System.out.println(dto.getResvDate());
+			String a = dto.getResvDate().substring(0, 10);
+			Date date = java.sql.Date.valueOf(a);
+			System.out.println(date);
+			ps.setDate(6,date);
 			ps.setString(7, uId);
 			
 			result = ps.executeUpdate();
@@ -234,5 +239,34 @@ public class DBServiceImpl implements DBService {
 			e.printStackTrace();
 		}
 		return list;
+	}
+
+	@Override
+	public int updateMovieInfo(MovieDTO dto, String title) {
+		String sql = "UPDATE movieinfo SET title = ?,  infomation = ?, actor = ?,"
+				+ "director = ?, filmrate = ?, runningtime = ?, nation = ?, moviedate =? WHERE title = ?";
+		int result = 0;
+		try {
+			ps = dbCommon.con.prepareStatement(sql);
+			ps.setString(1, dto.getTitle());
+			ps.setString(2, dto.getInfomation());
+			ps.setString(3, dto.getActor());
+			ps.setString(4, dto.getDirector());
+			ps.setString(5, dto.getFilmRate());
+			ps.setInt(6, dto.getRunningTime());
+			ps.setString(7, dto.getNation());
+			System.out.println(dto.getMovieDate());
+			System.out.println(dto.getMovieDate().length());
+			String a = dto.getMovieDate().substring(0, 10);
+			Date date = java.sql.Date.valueOf(a);
+			System.out.println(date);
+			ps.setDate(8, date);
+			ps.setString(9, title);
+			
+			result = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return result;
 	}
 }

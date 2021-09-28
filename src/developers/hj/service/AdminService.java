@@ -21,6 +21,5 @@ public interface AdminService {
 	public void showResvInfo();
 	public void cancelResv();
 	public void confirmCancel();
-	public void MoviedetailUpd();
 	
 }

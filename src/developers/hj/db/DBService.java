@@ -19,5 +19,6 @@ public interface DBService {
 	public int deleteResv(String id);
 	public int updateResvInfo(ResvDTO dto,String uId);
 	public ArrayList<MovieDTO> getAllMovieInfo();
+	public int updateMovieInfo(MovieDTO dto,String title);
 
 }
