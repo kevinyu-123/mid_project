@@ -4,56 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane layoutX="-1.0" prefHeight="415.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.yong.seatResv.SeatController">
+<AnchorPane layoutX="-1.0" prefHeight="400.0" prefWidth="978.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developers.yong.seatResv.SeatController">
    <children>
-      <AnchorPane layoutX="216.0" layoutY="-45.0" prefHeight="459.0" prefWidth="575.0">
+      <AnchorPane layoutX="217.0" layoutY="-45.0" prefHeight="445.0" prefWidth="574.0">
          <children>
-            <Line endX="508.20703125" endY="-0.5" layoutX="54.0" layoutY="432.0" startX="2.5" stroke="#b29292" />
-            <Line endX="498.9140625" endY="19.79290771484375" layoutX="64.0" layoutY="411.0" startX="497.5" startY="-336.5" stroke="#b29292" />
-            <Line endX="396.0" endY="-1.0" layoutX="165.0" layoutY="76.0" startX="-110.5" startY="-1.0" stroke="#b29292" />
-            <Line endX="-100.0" endY="319.0" layoutX="155.0" layoutY="114.0" startX="-101.0" startY="-38.5" stroke="#b29e9e" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="160.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="164.0">
                <image>
                   <Image url="@seatImage/abcde/a.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="220.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="224.0">
                <image>
                   <Image url="@seatImage/abcde/b.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="280.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="284.0">
                <image>
                   <Image url="@seatImage/abcde/c.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="340.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="344.0">
                <image>
                   <Image url="@seatImage/abcde/d.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="518.0" layoutY="75.0">
+            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="513.0" layoutY="75.0">
                <image>
                   <Image url="@seatImage/etcImage/exit.png" />
                </image>
+               <effect>
+                  <DropShadow />
+               </effect>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="55.0" layoutY="383.0">
+            <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="31.0" layoutY="383.0">
                <image>
                   <Image url="@seatImage/etcImage/exit.png" />
                </image>
+               <effect>
+                  <DropShadow />
+               </effect>
             </ImageView>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="76.0" opacity="0.89" prefHeight="70.0" prefWidth="426.0" style="-fx-background-color: #ECEBFF;" text="S C R E E N" textFill="#3e64bc80">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="76.0" opacity="0.89" prefHeight="71.0" prefWidth="413.0" style="-fx-background-color: #ECEBFF;" text="S C R E E N" textFill="#3e64bc80">
                <font>
                   <Font size="60.0" />
                </font>
             </Label>
-            <ToggleButton fx:id="aa1" layoutX="90.0" layoutY="160.0" mnemonicParsing="false" onAction="#a1" prefHeight="30.0" prefWidth="30.0">
+            <ToggleButton fx:id="aa1" layoutX="90.0" layoutY="160.0" mnemonicParsing="false" onAction="#a1" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #686868;">
             <graphic>
              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                <image>
@@ -62,7 +65,7 @@
             </ImageView>
             </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa2" layoutX="136.0" layoutY="160.0" mnemonicParsing="false" onAction="#a2" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="aa2" layoutX="136.0" layoutY="160.0" mnemonicParsing="false" onAction="#a2" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -71,7 +74,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa3" layoutX="227.0" layoutY="160.0" mnemonicParsing="false" onAction="#a3" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="aa3" layoutX="227.0" layoutY="160.0" mnemonicParsing="false" onAction="#a3" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -80,7 +83,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa4" layoutX="273.0" layoutY="160.0" mnemonicParsing="false" onAction="#a4" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="aa4" layoutX="273.0" layoutY="160.0" mnemonicParsing="false" onAction="#a4" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -89,7 +92,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa5" layoutX="319.0" layoutY="160.0" mnemonicParsing="false" onAction="#a5" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="aa5" layoutX="319.0" layoutY="160.0" mnemonicParsing="false" onAction="#a5" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -98,7 +101,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa6" layoutX="410.0" layoutY="160.0" mnemonicParsing="false" onAction="#a6" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="aa6" layoutX="410.0" layoutY="160.0" mnemonicParsing="false" onAction="#a6" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -107,7 +110,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="aa7" layoutX="456.0" layoutY="160.0" mnemonicParsing="false" onAction="#a7" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="aa7" layoutX="456.0" layoutY="160.0" mnemonicParsing="false" onAction="#a7" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -116,7 +119,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb1" layoutX="90.0" layoutY="220.0" mnemonicParsing="false" onAction="#b1" prefHeight="30.0" prefWidth="30.0">
+            <ToggleButton fx:id="bb1" layoutX="90.0" layoutY="220.0" mnemonicParsing="false" onAction="#b1" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -125,7 +128,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb2" layoutX="136.0" layoutY="220.0" mnemonicParsing="false" onAction="#b2" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="bb2" layoutX="136.0" layoutY="220.0" mnemonicParsing="false" onAction="#b2" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -134,7 +137,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb3" layoutX="227.0" layoutY="220.0" mnemonicParsing="false" onAction="#b3" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="bb3" layoutX="227.0" layoutY="220.0" mnemonicParsing="false" onAction="#b3" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -143,7 +146,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb4" layoutX="273.0" layoutY="220.0" mnemonicParsing="false" onAction="#b4" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="bb4" layoutX="273.0" layoutY="220.0" mnemonicParsing="false" onAction="#b4" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -152,7 +155,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb5" layoutX="319.0" layoutY="220.0" mnemonicParsing="false" onAction="#b5" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="bb5" layoutX="319.0" layoutY="220.0" mnemonicParsing="false" onAction="#b5" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -161,7 +164,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb6" layoutX="410.0" layoutY="220.0" mnemonicParsing="false" onAction="#b6" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="bb6" layoutX="410.0" layoutY="220.0" mnemonicParsing="false" onAction="#b6" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -170,7 +173,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="bb7" layoutX="456.0" layoutY="220.0" mnemonicParsing="false" onAction="#b7" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="bb7" layoutX="456.0" layoutY="220.0" mnemonicParsing="false" onAction="#b7" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -179,7 +182,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd1" layoutX="90.0" layoutY="340.0" mnemonicParsing="false" onAction="#d1" prefHeight="30.0" prefWidth="30.0">
+            <ToggleButton fx:id="dd1" layoutX="90.0" layoutY="340.0" mnemonicParsing="false" onAction="#d1" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -188,7 +191,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd2" layoutX="136.0" layoutY="340.0" mnemonicParsing="false" onAction="#d2" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="dd2" layoutX="136.0" layoutY="340.0" mnemonicParsing="false" onAction="#d2" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -197,7 +200,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd3" layoutX="227.0" layoutY="340.0" mnemonicParsing="false" onAction="#d3" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="dd3" layoutX="227.0" layoutY="340.0" mnemonicParsing="false" onAction="#d3" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -206,7 +209,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd4" layoutX="273.0" layoutY="340.0" mnemonicParsing="false" onAction="#d4" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="dd4" layoutX="273.0" layoutY="340.0" mnemonicParsing="false" onAction="#d4" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -215,7 +218,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd5" layoutX="319.0" layoutY="340.0" mnemonicParsing="false" onAction="#d5" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="dd5" layoutX="319.0" layoutY="340.0" mnemonicParsing="false" onAction="#d5" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -224,7 +227,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd6" layoutX="410.0" layoutY="340.0" mnemonicParsing="false" onAction="#d6" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="dd6" layoutX="410.0" layoutY="340.0" mnemonicParsing="false" onAction="#d6" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -233,7 +236,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="dd7" layoutX="456.0" layoutY="340.0" mnemonicParsing="false" onAction="#d7" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="dd7" layoutX="456.0" layoutY="340.0" mnemonicParsing="false" onAction="#d7" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -242,7 +245,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc1" layoutX="90.0" layoutY="280.0" mnemonicParsing="false" onAction="#c1" prefHeight="30.0" prefWidth="30.0">
+            <ToggleButton fx:id="cc1" layoutX="90.0" layoutY="280.0" mnemonicParsing="false" onAction="#c1" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -251,7 +254,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc2" layoutX="136.0" layoutY="280.0" mnemonicParsing="false" onAction="#c2" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="cc2" layoutX="136.0" layoutY="280.0" mnemonicParsing="false" onAction="#c2" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -260,7 +263,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc3" layoutX="227.0" layoutY="280.0" mnemonicParsing="false" onAction="#c3" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="cc3" layoutX="227.0" layoutY="280.0" mnemonicParsing="false" onAction="#c3" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -269,7 +272,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc4" layoutX="273.0" layoutY="280.0" mnemonicParsing="false" onAction="#c4" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="cc4" layoutX="273.0" layoutY="280.0" mnemonicParsing="false" onAction="#c4" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -278,7 +281,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc5" layoutX="319.0" layoutY="280.0" mnemonicParsing="false" onAction="#c5" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="cc5" layoutX="319.0" layoutY="280.0" mnemonicParsing="false" onAction="#c5" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -287,7 +290,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc6" layoutX="410.0" layoutY="280.0" mnemonicParsing="false" onAction="#c6" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="cc6" layoutX="410.0" layoutY="280.0" mnemonicParsing="false" onAction="#c6" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -296,7 +299,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <ToggleButton fx:id="cc7" layoutX="456.0" layoutY="280.0" mnemonicParsing="false" onAction="#c7" prefHeight="30.0" prefWidth="44.0">
+            <ToggleButton fx:id="cc7" layoutX="456.0" layoutY="280.0" mnemonicParsing="false" onAction="#c7" prefHeight="30.0" prefWidth="44.0" style="-fx-background-color: #686868;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="270.0">
                      <image>
@@ -305,44 +308,38 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
+            <Line endX="100.5" endY="13.792877197265625" layoutX="468.0" layoutY="35.0" startX="100.49998474121094" startY="407.0" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="180.0" smooth="false">
-         <image>
-            <Image url="@seatImage/etcImage/free-icon-black.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="850.0" layoutY="100.0" text="빈 좌석">
+      <Label layoutX="850.0" layoutY="100.0" text="빈 좌석" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="850.0" layoutY="140.0" text="좌석 선택">
+      <Label layoutX="850.0" layoutY="140.0" text="좌석 선택" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Line endX="100.0" endY="-14.0" layoutX="115.0" layoutY="14.0" startX="100.0" startY="399.5" />
-      <Label layoutX="14.0" layoutY="14.0" text="좌 석">
+      <Label layoutX="77.0" layoutY="20.0" text="좌 석" textFill="WHITE">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
-      <Label layoutX="21.0" layoutY="60.0" text="인원(최대 6매)">
+      <Label layoutX="21.0" layoutY="60.0" opacity="0.9" text="인원(최대 6매)" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="94.0" text="성 인" />
-      <Label layoutX="20.0" layoutY="154.0" text="청 소 년" />
-      <Button layoutX="19.0" layoutY="362.0" mnemonicParsing="false" onAction="#fxMvChoice" text="영화선택" />
-      <Button layoutX="139.0" layoutY="362.0" mnemonicParsing="false" onAction="#fxPayWith" text="결제선택" />
-      <Label layoutX="27.0" layoutY="253.0" text="총 결제금액">
+      <Label layoutX="28.0" layoutY="94.0" text="성 인" textFill="WHITE" />
+      <Label layoutX="20.0" layoutY="154.0" text="청 소 년" textFill="WHITE" />
+      <Button layoutX="19.0" layoutY="347.0" mnemonicParsing="false" onAction="#fxPayWith" prefHeight="38.0" prefWidth="184.0" style="-fx-background-color: #dd0b12;" text="결제선택" textFill="WHITE" />
+      <Label layoutX="27.0" layoutY="253.0" text="총 결제금액" textFill="WHITE">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <Label fx:id="fxAmount" layoutX="91.0" layoutY="307.0" text="0">
+      <Label fx:id="fxAmount" layoutX="104.0" layoutY="300.0" text="0" textFill="WHITE">
          <font>
             <Font size="23.0" />
          </font>
@@ -371,21 +368,18 @@
       <ToggleButton layoutX="142.0" layoutY="150.0" mnemonicParsing="false" onAction="#fxCdr3" text="3" toggleGroup="$cdrGroup" />
       <ToggleButton layoutX="94.0" layoutY="150.0" mnemonicParsing="false" onAction="#fxCdr1" text="1" toggleGroup="$cdrGroup" />
       <ToggleButton layoutX="118.0" layoutY="150.0" mnemonicParsing="false" onAction="#fxCdr2" prefHeight="23.0" prefWidth="1.0" text="2" toggleGroup="$cdrGroup" />
-      <Label layoutX="850.0" layoutY="180.0" text="예약 좌석">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="800.0" layoutY="100.0" smooth="false">
          <image>
             <Image url="@seatImage/whiteNum/free-icon-null.png" />
          </image>
       </ImageView>
-      <Label layoutX="28.0" layoutY="123.0" text="금 액" />
-      <Label fx:id="fxAdtPriceChange" layoutX="68.0" layoutY="123.0" text="15,000 X" />
-      <Label fx:id="fxAdtPrice" layoutX="123.0" layoutY="123.0" text="0 = 00,000 원" />
-      <Label layoutX="27.0" layoutY="180.0" text="금 액" />
-      <Label fx:id="fxCdrPriceChange" layoutX="68.0" layoutY="180.0" text="10,000 X" />
-      <Label fx:id="fxCdrPrice" layoutX="123.0" layoutY="180.0" text="0 = 00,000 원" />
+      <Label layoutX="28.0" layoutY="123.0" text="금 액" textFill="WHITE" />
+      <Label fx:id="fxAdtPriceChange" layoutX="68.0" layoutY="123.0" text="15,000 X" textFill="WHITE" />
+      <Label fx:id="fxAdtPrice" layoutX="123.0" layoutY="123.0" text="0 = 00,000 원" textFill="WHITE" />
+      <Label layoutX="27.0" layoutY="180.0" text="금 액" textFill="WHITE" />
+      <Label fx:id="fxCdrPriceChange" layoutX="68.0" layoutY="180.0" text="10,000 X" textFill="WHITE" />
+      <Label fx:id="fxCdrPrice" layoutX="123.0" layoutY="180.0" text="0 = 00,000 원" textFill="WHITE" />
+      <Line endX="100.5" endY="13.792877197265625" layoutX="114.0" layoutY="-9.0" startX="100.49998474121094" startY="407.0" />
+      <Line endX="-100.0" endY="319.0" layoutX="8.0" layoutY="76.0" startX="-101.0" startY="-38.5" stroke="#b29e9e" />
    </children>
 </AnchorPane>

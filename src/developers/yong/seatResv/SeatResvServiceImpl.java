@@ -3,6 +3,7 @@ package developers.yong.seatResv;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import common.ComService;
+import developers.soo.service.LoginImpl;
 import dto.ResvDTO;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -18,6 +19,7 @@ public class SeatResvServiceImpl implements SeatResvService{
 			adtTicket = 0,cdrTicket = 0,allTicket= 0;
 	String seatNum;
 	ArrayList<String> allSeatNum = new ArrayList<String>();
+	
 	// 영화선택창에서 dto 받아와야함
 	public void setRoot(Parent root) {this.root=root;}
 	// 숫자 3자리마다 콤마 넣기
@@ -70,6 +72,7 @@ public class SeatResvServiceImpl implements SeatResvService{
 		String resvNum3 = String.format("%04d",(int)(Math.random()*10000));
 		String resvNum4 = String.format("%04d",(int)(Math.random()*10000));
 		String resvNo = (resvNum1+"-"+resvNum2+"-"+resvNum3+"-"+resvNum4);
+		System.out.println();
 		dto.setResvNo(resvNo);
 		dto.setAmount(allAmount);
 		dto.setSeatNum(allSeatNum.toString());
@@ -118,6 +121,7 @@ public class SeatResvServiceImpl implements SeatResvService{
 			allSeatNum.remove(seatNum);
 		}
 	}
+	// 좌석 선택
 	public void a1() {
 		ToggleButton btnA1 = (ToggleButton)root.lookup("#aa1");String alp = "a";String num = "1"; 
 		if(allSeatNum.size()<allTicket) {setBtnGrp(btnA1,alp,num);}

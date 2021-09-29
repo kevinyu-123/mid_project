@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -14,12 +13,7 @@
       <Label layoutX="217.0" layoutY="22.0" text="결제" />
       <AnchorPane layoutX="1.0" layoutY="66.0" prefHeight="200.0" prefWidth="457.0" style="-fx-background-color: black;" AnchorPane.topAnchor="66.0">
          <children>
-            <Label layoutX="165.0" layoutY="51.0" prefHeight="107.0" prefWidth="219.0" text="영화 내용 " textFill="WHITE" />
-            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="14.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@seatImage/abcde/a.png" />
-               </image>
-            </ImageView>
+            <ImageView fx:id="fxMvImage" fitHeight="150.0" fitWidth="186.0" layoutX="136.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="1.0" layoutY="276.0" prefHeight="90.0" prefWidth="457.0" style="-fx-background-color: black;">

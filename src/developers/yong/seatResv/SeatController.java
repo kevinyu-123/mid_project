@@ -35,8 +35,7 @@ public class SeatController implements Initializable{
 	public void fxCdr1() {srs.cdr1();}
 	public void fxCdr2() {srs.cdr2();}
 	public void fxCdr3() {srs.cdr3();}
-	//영화선택메뉴가기
-	public void fxMvChoice(){}
+	
 	//DTO와 같이 결제선택창으로 넘어가기
 	public void fxPayWith(){
 		dto = srs.payChoice();

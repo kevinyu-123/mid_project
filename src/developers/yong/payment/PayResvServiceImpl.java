@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class PayResvServiceImpl implements PayResvService{
@@ -41,7 +43,33 @@ public class PayResvServiceImpl implements PayResvService{
 		}
 	}
 	// 영화 내용 뷰
-	public void mvInfoView(Parent root) {}
+	public void mvInfoView(Parent root) {
+		ImageView imgv = (ImageView) root.lookup("#fxMvImage");
+		if(dto.getTitle().equals("")) {
+			Image img = new Image("");
+			imgv.setImage(img);
+			imgv.prefHeight(100);
+			imgv.prefWidth(100);
+		}
+		if(dto.getTitle().equals("")) {
+			Image img = new Image("");
+			imgv.setImage(img);
+			imgv.prefHeight(100);
+			imgv.prefWidth(100);
+		}
+		if(dto.getTitle().equals("")) {
+			Image img = new Image("");
+			imgv.setImage(img);
+			imgv.prefHeight(100);
+			imgv.prefWidth(100);
+		}
+		if(dto.getTitle().equals("")) {
+			Image img = new Image("");
+			imgv.setImage(img);
+			imgv.prefHeight(100);
+			imgv.prefWidth(100);
+		}
+	}
 	// 결제 - 할인
 	public void pay_Discnt(Parent root) {
 		Label amount = (Label)root.lookup("#fxAmount");
@@ -61,8 +89,8 @@ public class PayResvServiceImpl implements PayResvService{
 		RadioButton bank = (RadioButton)root.lookup("#fxBank");
 		RadioButton toss = (RadioButton)root.lookup("#fxToss");
 		if(cc.isSelected()) {dto.setPayWith("신용카드");}
-		if(kakao.isSelected()) {dto.setPayWith("무통장입금");}
-		if(bank.isSelected()) {dto.setPayWith("카카오페이");}
+		if(kakao.isSelected()) {dto.setPayWith("카카오페이");}
+		if(bank.isSelected()) {dto.setPayWith("무통장입금");}
 		if(toss.isSelected()) {dto.setPayWith("Toss");}
 	}
 	// 사용자 티켓 내용 
@@ -73,7 +101,7 @@ public class PayResvServiceImpl implements PayResvService{
 			DBServiceImpl dbs = new DBServiceImpl();
 			dbs.updateResv(dto);
 			ResvViewService rvs = new ResvViewServiceImpl();
-			rvs.resvView(root,dto.getId());
+			rvs.resvView(root,dto.getResvNo());
 		});
 	}
 }

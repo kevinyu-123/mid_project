@@ -1,6 +1,6 @@
 create table reservations (
 title varchar2 (100) , //영화 이름
-Id varchar(100), //회원 아이디
+Id varchar(100), // 회원 아이디
 RESVNO VARCHAR2 (100) primary key, //예매 번호 (1111-2222-3333-4444)
 RESEVDATE date, //관람 일시 (values(to_date('20xx-xx-xx')))
 theater varchar2 (100), // 관람 극장 (CGV or 메가박스 or 롯데시네마)

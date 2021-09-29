@@ -1,4 +1,6 @@
 package developers.yong.resvView;
+import java.text.DecimalFormat;
+
 import db.DBServiceImpl;
 import dto.ResvDTO;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 public class ResvViewServiceImpl implements ResvViewService{
-	public void resvView(Parent root, String memId) {
+	public void resvView(Parent root, String resvNo) {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/developers/yong/ReservView.fxml"));
 		Parent viewRoot = null;
 		try {
@@ -25,8 +27,6 @@ public class ResvViewServiceImpl implements ResvViewService{
 		TextField title = (TextField)viewRoot.lookup("#fxMvTitle");
 		TextField id = (TextField)viewRoot.lookup("#fxId");
 		TextField resvNum = (TextField)viewRoot.lookup("#fxResvNum");
-		TextField resvDate = (TextField)viewRoot.lookup("#fxResvDate");
-		TextField theater = (TextField)viewRoot.lookup("#fxTheater");
 		TextField ticket = (TextField)viewRoot.lookup("#fxTicket");
 		TextField seatNum = (TextField)viewRoot.lookup("#fxSeatNum");
 		TextField paymentDay = (TextField)viewRoot.lookup("#fxPayMentDay");
@@ -35,18 +35,17 @@ public class ResvViewServiceImpl implements ResvViewService{
 		
 		DBServiceImpl dbs = new DBServiceImpl();
 		ResvDTO dto = new ResvDTO();
-		dto = dbs.toIdgetResv("id4321");
+		dto = dbs.getResv(resvNo);
 		
 		title.setText(dto.getTitle());
 		id.setText(dto.getId());
 		resvNum.setText(dto.getResvNo());
-		resvDate.setText(dto.getResvDate());
-		theater.setText(dto.getTheater());
 		String allTicket = ("성인 "+dto.getAdtTicket()+" 청소년 "+dto.getCdrTicket());
 		ticket.setText(allTicket);
 		seatNum.setText(dto.getSeatNum());
 		paymentDay.setText(dto.getPaymentDay());
 		payWith.setText(dto.getPayWith());
+		DecimalFormat decFormat = new DecimalFormat("###,###");
 		amount.setText(dto.getAmount()+" 원");
 		
 		Button resvCancel = (Button)viewRoot.lookup("#ResvCancel");
